@@ -1,0 +1,12 @@
+## Please download pkgs independently to prevent unintended malware.
+## Pay close attention to the pkg name when installing (e.g., no spelling errors/variants).
+
+#python>=3.10.9
+#pandas>=1.5.3
+#praw>=7.6.1
+#nltk>=3.8.1
+#scikit-learn>=1.2.1
+#bertopic>=0.13.0
+#matplotlib>=3.6.2
+#beautifulsoup4>=4.11.1
+#spacy>=3.5.2
