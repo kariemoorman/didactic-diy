@@ -1,5 +1,8 @@
 ## didactic-diy: Reddit
 #### Description: DataSci randomness, for practice and utility, using Reddit.
+
+<b>License: [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)</b>
+
 ---
 #### Contents include the following: 
 - Webscraping: [reddit_scraper](https://github.com/kariemoorman/reddit/tree/main/__scripts/reddit_scraper)
@@ -13,8 +16,7 @@
 #### Programming Lx's include the following: 
 - HTML5
 - CSS3
-- JS (e.g., Node.JS, TypeScript, React.JS)
+- JS
 - Python3
-- SQL (e.g., PostgreSQL, MySQL, SQLite)
-- R
+- SQL
 ---
