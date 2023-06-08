@@ -51,7 +51,6 @@ def praw_find_commenters(subreddit_list, category, post_limit=1000,sep='comma'):
         
         for subreddit in subreddit_list: 
             print(f'Gathering users from Subreddit: "{subreddit}"...')
-            os.makedirs(f"../__users/subreddit_users/{category}/{subreddit}/{snapshotdate}/praw", exist_ok=True)
             users = []
             sub_posts = reddit.subreddit(subreddit).new(limit=post_limit)
             for post in sub_posts:
@@ -63,8 +62,24 @@ def praw_find_commenters(subreddit_list, category, post_limit=1000,sep='comma'):
                         #print(comment.body, comment.author.name) 
                     commenters.append(f'{comment.author}')
                 users.append([post.created_utc, created_pst, post.id, post.subreddit, post.url, post.author, commenters])
-                post_df = pd.DataFrame(users,columns=['created_unix_utc', 'created_datetime_pst','id', 'subreddit', 'url', 'author', 'commenters'])
-                post_df.to_csv(f'../__users/subreddit_users/{category}/{subreddit}/{snapshotdate}/praw/{subreddit}_subreddit_newposts_{snapshotdatetime}.csv', index=False, sep=sep, encoding='utf-8')  
+            #Write Results to CSV
+            os.makedirs(f"../__users/subreddit_users/{category}/{subreddit}/{snapshotdate}/praw", exist_ok=True)
+            post_df = pd.DataFrame(users,columns=['created_unix_utc', 'created_datetime_pst','id', 'subreddit', 'url', 'author', 'commenters'])
+            post_df.to_csv(f'../__users/subreddit_users/{category}/{subreddit}/{snapshotdate}/praw/{subreddit}_subreddit_newposts_{snapshotdatetime}.csv', index=False, sep=sep, encoding='utf-8')  
+            #Isolate Post Submitters and Commenters for Frequency Count
+            submitter_list = Counter(list(post_df.author)).most_common()
+            commenters_flattened = [item for sublist in list(post_df.commenters) for item in sublist]
+            commenters_flattened_no_na = [i for i in commenters_flattened if i == i and i !='' and i !='None']
+            commenter_list = Counter(commenters_flattened_no_na).most_common()
+            #Restructure Username Frequency Results as Dictionary
+            s=dict(submitter_list)
+            c=dict(commenter_list)
+            #Create DataFrame with Metadata
+            commenters_output_df = pd.DataFrame({"query_date": snapshotdate, "subreddit": subreddit, "comment_author": c.keys(), "comment_frequency": c.values()})
+            submitters_output_df = pd.DataFrame({"query_date": snapshotdate, "subreddit": subreddit, "submission_author": s.keys(), "submission_frequency": s.values()})
+            #Write Frequency Results as CSV
+            commenters_output_df.to_csv(f'../__data/__users/subreddit_users/{category}/{subreddit}/{snapshotdate}/praw/{subreddit}_username_commenters_{snapshotdatetime}.csv', index=False, sep=sep)
+            submitters_output_df.to_csv(f'../__data/__users/subreddit_users/{category}/{subreddit}/{snapshotdate}/praw/{subreddit}_username_submitters_{snapshotdatetime}.csv', index=False, sep=sep)
         print("Task is Complete!")
         time.sleep(5)
     except TypeError:
