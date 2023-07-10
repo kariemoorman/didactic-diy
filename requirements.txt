@@ -1,14 +1,30 @@
 ## Please review pkgs before installing to prevent unintended malware.
 ## Pay close attention to the pkg name when installing (e.g., no spelling errors/variants).
 
-python==3.10.11
-pandas==1.5.3
-praw==7.7.0
-nltk==3.8.1
-scikit-learn==1.2.2
-bertopic==0.14.0
-matplotlib==3.7.0
-seaborn==0.12.2
-beautifulsoup4==4.12.2
-spacy==3.5.2
-mysql-connector-python==8.0.33
+## Programming Lx 
+python
+
+## Data Manipulation
+pandas
+numpy
+
+## Data Extraction 
+beautifulsoup4
+urllib3
+praw
+
+## NLP Tasks
+nltk
+scikit-learn
+bertopic
+spacy
+
+## Database Creation and Management 
+mysql-connector-python
+getpass
+
+## Visualization 
+matplotlib
+seaborn
+dash
+plotly
