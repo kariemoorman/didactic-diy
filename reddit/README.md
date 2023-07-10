@@ -8,7 +8,7 @@
 - Data Processing: [reddit_nlp](https://github.com/kariemoorman/didactic_diy/tree/main/reddit/__scripts/reddit_nlp)
 --- 
 #### Data Pipeline 
-![alt text](https://github.com/kariemoorman/didactic_diy/tree/main/reddit/__media/images/data_pipelines-reddit_local_pipeline.drawio.png)
+![alt text](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__media/images/data_pipelines-reddit_local_pipeline.drawio.png)
 
 --- 
 
