@@ -90,7 +90,7 @@ category_list = ['AmazonAlexa','AmazonPrimeAV']
 
 In this example, all Subreddit subdirectory names within a provided Category subdirectory are discovered at runtime, as *subreddit_list* is set to ['all']. In cases where the explicit specification of Subreddit subdirectories is desired, simply define the list of target Subreddit subdirectories using the *subreddit_list* input variable (e.g., subreddit_list=['amazon', 'alexa']).
 
-For users who use [subreddit_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py) and/or [subreddit_search_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_search_scraper.py) to generate subreddit_datasets, the [reddit_text_preprocessor.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_nlp/reddit_text_preprocessor.py) script provides a simple way to aggregate and pre-process Reddit text data.
+For users who use [subreddit_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py) and/or [subreddit_search_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_search_scraper.py) to generate subreddit_datasets, the [reddit_text_preprocessor.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_nlp/reddit_text_preprocessor.py) script provides a simple way to quickly aggregate and pre-process Reddit text data.
 
 For users who wish to perform a preliminary text pre-processing step and do not need to specify Subreddit subdirectories within a list of Category subdirectories, the [reddit_text_preprocessor.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_nlp/reddit_text_preprocessor.py) script is for you.
 
@@ -110,7 +110,6 @@ The [scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-d
 
 <b>search_scrape_and_clean_reddit_posts( )</b>.
 
-<br>
 The <b>scrape_and_clean_reddit_posts( )</b> function requires users specify a *subreddit_list* of subreddit names, a *category* subdirectory name (where the set of Subreddit subdirectories and Subreddit datasets will be written), and a choice of *api* (either 'praw' or 'pushshift'). Depending on *api* choice, users can further define input specifications for webscraping task execution (e.g., api='praw': post_type, post_limit; api='pushshift': before_days, post_limit).
 
 With a *subreddit_list*, a *category* subdirectory name, and a choice of *api* specified, <b>scrape_and_clean_reddit_posts( )</b> calls [subreddit_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py) and [reddit_text_preprocessor.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_nlp/reddit_text_preprocessor.py) to perform a webscraping task and text cleaning task for each Subreddit.
@@ -234,9 +233,9 @@ Both <b>scrape_and_clean_reddit_posts( )</b> and <b>search_scrape_and_clean_redd
 
 The '__posts' subdirectory is a product of the webscraping task, while the '__aggregated_posts' sudirectory is a product of the text cleaning task.
 
+For users who want to specify a limited amount of information (i.e., a list of subreddit names, a category subdirectory name) and have the script handle the rest (webscraping and text pre-processing), the [scrape_and_clean_reddit_posts.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
 
-For users who want to specify a limited amount of information (i.e., a list of subreddit names, a category subdirectory name, a list of search query terms) and have the script handle the rest (webscraping and text pre-processing), the [scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
+For users who want to specify exact information regarding the type of api calls to be made (e.g., api as 'praw' or 'pushshift', post_limit, post_type, before_days) and/or the type of text pre-processing to be conducted (e.g., 'token' or 'lemma', stopword filtering as 'general' or 'prep' or 'full', NER singularization), and have the script handle the rest (webscraping and text pre-processing), the [scrape_and_clean_reddit_posts.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
 
-
-For users who want to specify exact information regarding the type of api calls to be made (e.g., api as 'praw' or 'pushshift', post_limit, post_type, before_days) and/or the type of text pre-processing to be conducted (e.g., 'token' or 'lemma', stopword filtering as 'general' or 'prep' or 'full', NER singularization), and have the script handle the rest (webscraping and text pre-processing), the [scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
+For users who want to add a list of search query terms to their extract and transform process, [search_scrape_and_clean_reddit_posts.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
 
