@@ -12,6 +12,7 @@
 ### Projects
 
 #### [Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit)
+#### [TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)
 
 --- 
 
