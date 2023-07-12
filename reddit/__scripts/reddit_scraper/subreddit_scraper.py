@@ -105,7 +105,7 @@ def pushshift_subreddit_activity(subreddit_list, category, before_days, post_lim
     pushshift_subreddit_activity(subreddit_list=['alexa','amazonecho'], category='Amazon', before_days='90d', post_limit=1000)
     
     '''
-
+## To-Do: Add input validation checks.
     subreddit_list = subreddit_list
     category = category
     before_days = before_days
