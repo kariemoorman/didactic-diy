@@ -7,6 +7,7 @@ from datetime import datetime
 import pandas as pd 
 
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.common.by import By
@@ -14,22 +15,7 @@ from selenium.webdriver.common.by import By
 
 
 
-def tiktok_user_video_scraper(url_list, browser): 
-    
-    ''' 
-    Definition: 
-    For each URL in URL List, extract username, bio, video URLs and associated video captions.
-    Write results as CSV.
-    
-    Input Values:
-    URL List: list of tiktok user profile URLs. 
-    Browser: Choice of "chrome" or "firefox". 
-    
-    Example: 
-    url_list = ['https://www.tiktok.com/@blitzphd', 'https://www.tiktok.com/@eczachly']
-    tiktok_selenium_user_video_scraper(url_list=url_list, browser='chrome')
-    
-    '''
+def tiktok_selenium_user_video_scraper(url_list, browser): 
     
     # DateTime Snapshot
     snapshotdate = datetime.today().strftime('%d-%b-%Y')
@@ -91,7 +77,7 @@ def tiktok_user_video_scraper(url_list, browser):
         caption_items = [i.get_attribute('alt') for i in captions]
         caption_list = [re.sub(r"(    |   |  | )created by ([A-Za-z0-9].*?)( [A-Za-z0-9].*?)? with ([A-Za-z0-9].*?)( [A-Za-z0-9].*?)?\'s original sound", "", i) for i in caption_items]
     # Create Output Directory
-    os.makedirs(f"../__data/__videos/{username}/{snapshotdate}", exist_ok=True)
+    os.makedirs(f"../__data/__tiktoks/{username}/{snapshotdate}", exist_ok=True)
     # Create Dataframe 
     tiktok_df['video_link']= video_list
     tiktok_df['video_captions']= caption_list
@@ -99,10 +85,10 @@ def tiktok_user_video_scraper(url_list, browser):
     tiktok_df['username'] = [username for i in range(len(tiktok_df))]
     tiktok_df = tiktok_df.iloc[:,[3,2,0,1]]
     # Save DataFrame
-    tiktok_df.to_csv(f"../__data/__videos/{username}/{snapshotdate}/{username}_tiktok_videos_{snapshotdatetime}.csv", index=False, sep='\t', encoding='utf-8')
+    tiktok_df.to_csv(f"../__data/__tiktoks/{username}/{snapshotdate}/{username}_tiktok_videos_{snapshotdatetime}.csv", index=False, sep='\t', encoding='utf-8')
     #Close URL Connection
     driver.close()
     
     
 if __name__ == "__main__":
-    tiktok_user_video_scraper()
+    tiktok_selenium_user_video_scraper()
