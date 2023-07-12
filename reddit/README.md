@@ -4,9 +4,10 @@
 ---
 ### Repository Contents
 - Webscraping: 
-[reddit_scraper](https://github.com/kariemoorman/didactic_diy/tree/main/reddit/__scripts/reddit_scraper)
-- Data Processing: [reddit_nlp](https://github.com/kariemoorman/didactic_diy/tree/main/reddit/__scripts/reddit_nlp)
-- Sample Datasets: [__data](https://github.com/kariemoorman/didactic_diy/tree/main/reddit/__data)
+[reddit_scraper](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper)
+- Data Processing: [reddit_nlp](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_nlp)
+- Data Pipeline: [__data_pipeline](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__data_pipeline)
+- Sample Datasets: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__data)
 
 --- 
 
