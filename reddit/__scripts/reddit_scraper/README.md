@@ -33,3 +33,31 @@ The [subreddit_lists.py](https://github.com/kariemoorman/didactic-diy/blob/main/
 script provides a list of subreddits for use in both the [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-scraper.py) function (as input argument *subreddit_list*) and [subreddit-search-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-search-scraper.py) function (as input arguments *subreddit_list* & *search_query_list*).
 
 ---
+
+#### Important Note: 
+To use Reddit-Scraper scripts in their current form, please 
+
+(1) Create a credentials.py file that contains your Reddit development application and user credentials, e.g., 
+```
+filepath: didactic-diy/reddit/__scripts/reddit_scraper/credentials.py
+```
+```
+#!/usr/bin/python3
+
+## Credentials ##
+my_client_id = '<your_client_id>'
+my_client_secret = '<your_client_secret>'
+my_user_agent = '<your_user_agent>'
+my_password = "<your_password>"
+my_username = "<your_username>"
+
+```
+
+(2) Add credentials.py to .gitignore 
+```
+filepath: didactic-diy/.gitignore
+```
+```
+# Credentials files
+credentials.py
+```
