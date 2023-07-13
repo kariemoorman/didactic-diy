@@ -23,8 +23,8 @@ The [subreddit_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/mai
 
 If you wish to extract submissions and comments for a particular Subreddit, use this script.
 
-- #### [subreddit-search-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py)
-The [subreddit-search-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py) script allows for use of both Reddit's PRAW API (via praw_search_subreddit_activity( )) and Pushshift's API (via pushshift_search_subreddit_activity( )) to extract submission and comment activity for a predefined list of Subreddits, based on a set of pre-defined search terms.
+- #### [subreddit_search_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py)
+The [subreddit_search_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_scraper.py) script allows for use of both Reddit's PRAW API (via praw_search_subreddit_activity( )) and Pushshift's API (via pushshift_search_subreddit_activity( )) to extract submission and comment activity for a predefined list of Subreddits, based on a set of pre-defined search terms.
 
 If you wish to extract submissions and comments for a particular Subreddit, only when they include a particular search term, use this script.
 
