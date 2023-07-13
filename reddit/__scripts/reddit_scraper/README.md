@@ -1,7 +1,8 @@
-## Reddit-Scraper Example Use-Cases
+<h3 align='center'>Reddit-Scraper Example Use-Cases </h3>
+
 ---
 ### Identify & Extract Reddit User Activity
-
+---
 - #### [subreddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-user-activity-scraper.py)
 
 The [subreddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-user-activity-scraper.py) script allows for use of both Reddit's PRAW API (via praw_find_commenters( )) and Pushshift's API (via pushshift_find_commenters( )) to generate a list of Reddit users who provide submissions and comments within a pre-defined set of Subreddits, ordered by frequency.
@@ -13,9 +14,10 @@ The [reddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-d
 
 If you wish to find the submission and comment history for a particular Reddit user, use this script.
 
+ 
 ---
 ### Extract Subreddit Post Activity
-
+---
 - #### [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-scraper.py) 
 The [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-scraper.py) script allows for use of both Reddit's PRAW API (via praw_subreddit_activity( )) and Pushshift's API (via pushshift_subreddit_activity( )) to extract submission and comment activity for a pre-defined list of Subreddits.
 
@@ -29,3 +31,5 @@ If you wish to extract submissions and comments for a particular Subreddit, only
 - #### [subreddit_lists.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_lists.py)
 The [subreddit_lists.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_lists.py) 
 script provides a list of subreddits for use in both the [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-scraper.py) function (as input argument *subreddit_list*) and [subreddit-search-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-search-scraper.py) function (as input arguments *subreddit_list* & *search_query_list*).
+
+---
