@@ -6,7 +6,7 @@
 ### Overview Statement
 
 Parameters considered when constructing a data pipeline include the following: 
-- <b>GDPR Compiance</b>: <i>Is any of the data I wish to extract classified as PII/PHI? </i>
+- <b>GDPR Compliance</b>: <i>Is any of the data I wish to extract classified as PII/PHI? </i>
 - <b>Cost</b>: <i>How much am I willing to spend to maintain each step of the data pipeline? </i>
 - <b>SLA</b>: <i>How fast do I need the data to be transformed and loaded for visualization? </i>
 - <b>Data Storage Location</b>: <i>Where do I want my data to be stored: local/on-premises, cloud, or hybrid? </i>
