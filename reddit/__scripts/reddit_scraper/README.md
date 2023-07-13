@@ -15,7 +15,7 @@ If you want to find the submission and comment history for a particular Reddit u
 
 ### Extract Subreddit Post Activity
 
-#### [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit-scraper/subreddit-scraper.py) 
+#### [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-scraper.py) 
 The [subreddit-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-scraper.py) script allows for use of both Reddit's PRAW API (via *praw_subreddit_activity( )*) and Pushshift's API (via *pushshift_subreddit_activity( )*) to extract submission and comment activity for a pre-defined list of Subreddits.
 
 If you want to extract submissions and comments for a particular Subreddit, use this script.
