@@ -1,5 +1,6 @@
-## didactic-diy
-#### Description: DataSci randomness, for practice and utility.
+<h2 align='center'>didactic-diy</h2>
+<h4 align='center'>Data Science & Engineering randomness, for practice and utility.</h4>
+
 ---
 #### Contents include the following: 
 - <b>Web Scraping</b>
@@ -24,5 +25,5 @@
 
 --- 
 
-<b>License: [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)</b>
+<p align='center'><b>License: [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)</b></p>
 
