@@ -5,7 +5,6 @@
 
 from reddit_scraper.subreddit_lists import * 
 from reddit_nlp.reddit_text_preprocessor import preprocess_data
-from reddit_scraper.subreddit_scraper import pushshift_subreddit_activity, praw_subreddit_activity
 from reddit_scraper.subreddit_search_scraper import praw_search_subreddit_activity, pushshift_search_subreddit_activity
 
 
