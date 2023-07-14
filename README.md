@@ -1,5 +1,5 @@
 <h2 align='center'>didactic-diy</h2>
-<h4 align='center'>Data Science & Engineering randomness, for practice and utility.</h4>
+<h4 align='center'>Data Engineering, Science & Analytics, for practice and utility.</h4>
 
 ---
 #### Contents include the following: 
