@@ -10,7 +10,7 @@
   - SQL: [MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/), [PostgreSQL](https://www.postgresql.org/)
   - Python: [PyMySQL](https://pypi.org/project/pymysql/) (MySQL database adaptor for Python), [psycopg2](https://pypi.org/project/psycopg2/) (PostgreSQL database adapter for Python)
 - <b>Data Structures & Processing</b>
-  - Python: [pandas](https://pypi.org/project/pandas/), [numpy](https://pypi.org/project/numpy/), [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/)
+  - Python: [pandas](https://pypi.org/project/pandas/), [numpy](https://pypi.org/project/numpy/), [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [regex](https://pypi.org/project/regex/)
 - <b>Modeling (e.g., Statistical, ML)</b>
   - Python: [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [scikit-learn](https://pypi.org/project/scikit-learn/), [bertopic](https://pypi.org/project/bertopic/)
 - <b>Visualization</b>
