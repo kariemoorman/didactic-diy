@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-import os, sys
-import time 
+import os, sys, time
 import requests
 from datetime import datetime
 from collections import Counter
