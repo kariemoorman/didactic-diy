@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os, sys
+import os, sys, time
 from datetime import datetime
 import praw 
 import pandas as pd
@@ -73,6 +73,7 @@ def extract_user_activity(username_list, post_type='new', post_limit=1000, sep='
             submissions.append([submission.created_utc, created_pst, post_type, username, submission.subreddit, submission.id, submission.title, submission.selftext, submission.num_comments, submission_comments_agg, submission.url])
         submissions_df = pd.DataFrame(submissions, columns=['created_unix_utc', 'created_pst', 'post_type', 'username', 'subreddit', 'id', 'title', 'body', 'num_comments', 'submission_comments', 'reddit_permalink'])
         submissions_df.to_csv(f'../__data/__users/usernames/{username}/{username}_subreddit_submissions_{post_type}_{snapshotdate}.csv', index=False, sep=sep)
+        time.sleep(60)
     print("Task is Complete!")
     
     
