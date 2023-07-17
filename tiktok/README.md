@@ -4,9 +4,9 @@ TikTok.</h4>
 
 ---
 
-#### Repository Contents
-- Web Scraping: [tiktok_scraper](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__scripts/tiktok_scraper)
-- Sample Datasets: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
+### Repository Contents
+- <b>Web Scraping</b>: [tiktok_scraper](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__scripts/tiktok_scraper)
+- <b>Sample Datasets</b>: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
 
 ---
 
