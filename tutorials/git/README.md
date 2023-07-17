@@ -3,8 +3,7 @@
 
 ---
 
-<img 
-src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/git/git-commands.drawio.png"/>
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/git/github-commands.drawio.png' height='60%' width='60%'/></p>
 
 
 ---
