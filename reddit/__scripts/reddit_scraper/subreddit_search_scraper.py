@@ -43,12 +43,6 @@ def praw_search_subreddit_activity(subreddit_list, search_query_list, category, 
     praw_search_subreddit_activity(subreddit_list=['alexa','amazonecho'], search_query_list=['notification', 'volume'], category='Amazon', sep='comma', post_type='new', post_limit=1000)
     
     '''
-
-    post_limit = post_limit
-    post_type = post_type 
-    category = category
-    subreddit_list = subreddit_list
-    search_query_list = search_query_list
     
     try: 
         if type(subreddit_list) != list:
@@ -100,8 +94,8 @@ def praw_search_subreddit_activity(subreddit_list, search_query_list, category, 
                             for comment in submission.comments.list():
                                 comments.append(f'{comment.author}: {comment.body}')
                             ## Transform posts data to pandas DataFrame.
-                            posts.append([post.created_utc, created_pst, search_item, post.subreddit, post.id, post.title, post.author, post.score, post.url, post.selftext, post.num_comments, comments])
-                            post_df = pd.DataFrame(posts,columns=['created_unix_utc', 'created_datetime_pst', 'search_item', 'subreddit', 'id', 'title', 'author', 'score', 'url', 'body', 'num_comments', 'comments'])
+                            posts.append([post.created_utc, created_pst, post_type, search_item, post.subreddit, post.id, post.title, post.author, post.score, post.url, post.selftext, post.num_comments, comments])
+                            post_df = pd.DataFrame(posts,columns=['created_unix_utc', 'created_datetime_pst', 'post_type', 'search_item', 'subreddit', 'id', 'title', 'author', 'score', 'url', 'body', 'num_comments', 'comments'])
                             ## Write DataFrame as CSV to output directory.
                             post_df.to_csv(f'../__data/__posts/{category}/{subreddit}/{subreddit}_subreddit_search_{post_type}_posts_{snapshotdatetime}.csv', index=False, sep=sep)
                     except ValueError: 
