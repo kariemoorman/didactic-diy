@@ -1,5 +1,5 @@
 ## didactic-diy: Reddit
-#### Description: DataSci randomness, for practice and utility, using Reddit.
+#### Data randomness, for practice and utility, using Reddit.
 
 ---
 ### Repository Contents
