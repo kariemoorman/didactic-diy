@@ -6,7 +6,7 @@
 - Data Pipeline: [__data_pipeline](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__data_pipeline)
 - Database Management: [reddit_sql](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_sql)
 - Web Scraping: [reddit_scraper](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper)
-- Data Processing: [reddit_nlp](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_nlp)
+- Text Data Processing: [reddit_nlp](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_nlp)
 - Sample Datasets: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__data)
 
 --- 
