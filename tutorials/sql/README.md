@@ -30,86 +30,17 @@
 ### Window Functions
 ---
 
-### Aggregate Window Functions 
+#### Aggregate Window Functions 
 
-<ul>
-<li>
-<p><b>AVG</b>: The AVG() function returns the average of a set: <code>AVG(ALL | DISTINCT)</code>. </p>
-</li>
-<li>
-<p><b>MIN</b>: The MIN() function returns the minimum value of a set: <code>MIN(column | expression)</code>.</p>
-</li>
-<li>
-<p><b>MAX</b>: The MAX() function returns the maximum value of a set: <code>MAX(column | expression)</code>.</p>
-</li>
-<li>
-<p><b>COUNT</b>: The COUNT() function returns the number of items in a set: <code>COUNT ([ALL | DISTINCT] column | expression | *)</code>.</p>
-</li>
-<li>
-<p><b>SUM</b>: The SUM() function returns the sum of all values: <code>SUM([ALL | DISTINCT] column)</code>.</p>
-</li>
-</ul>
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-aggregate_window.drawio.png' width='95%'/></p>
 
+#### Value Window Functions
 
-### Value Window Functions
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-value_window.drawio.png' width='95%'/></p>
 
-<ul>
-<li>
-<p><b>FIRST_VALUE</b>: The FIRST_VALUE() window function returns the first value in an ordered set of values:</p>  
-	<code>FIRST_VALUE(column | expression) OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC]
-    frame_clause)</code>. 
-</li>
-<li>
-<p><b>LAST_VALUE</b>: The LAST_VALUE() window function returns the last value in an ordered set of values:</p>
-	<code>LAST_VALUE(column | expression) OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC]
-    frame_clause)</code>. 
-</li>
-<li>
-<p><b>LAG</b>: The LAG() window function provides access to a row at a specified physical offset that precedes the current row:</p>
-	<code>LAG([column] [, offset_value , default_value ]) OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC])</code>. 
-</li>
-<li>
-<p><b>LEAD</b>: The LEAD() window function provides access to a row at a specified physical offset that follows the current row:</p>
-	<code>LEAD([column] [, offset_value , default_value ]) OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC])</code>. 
-</li>
-</ul>
+#### Ranking Window Functions
 
-### Ranking Window Functions
-
-<ul>
-<li>
-<p><b>ROW_NUMBER</b>: The ROW_NUMBER()  window function assigns a sequential integer number to each row in the query’s result set:</p>
-	<code>ROW_NUMBER() OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC])</code>. 
-</li>
-<li>
-<p><b>RANK</b>: The RANK() window function assigns a rank to each row in the partition of a result set. The rank of a row is determined by one plus the number of ranks that come before it. RANK() does not always generate consecutive rank values:</p>
-	<code>RANK() OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC])</code>. 
-</li>
-<li>
-<p><b>DENSE_RANK</b>: The DENSE_RANK() window function assigns ranks to rows in partitions with no gaps in the ranking values. DENSE_RANK() always generates consecutive rank values:</p>
-	<code>DENSE_RANK() OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC])</code>. 
-</li>
-<li>
-<p><b>PERCENT_RANK</b>: The PERCENT_RANK() window function calculates the percentile ranking of rows in a result set:</p>
-	<code>ROUND(PERCENT_RANK() OVER (
-    PARTITION BY [column]
-    ORDER BY [column] [ASC | DESC]), [integer])</code>.
-</li>
-</ul>
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-rank_window.drawio.png' width='95%'/></p>
 
 ---
 ### Table JOINs
