@@ -15,8 +15,8 @@
 
 <div>
 <table>
-	  <tr>
-    	  <td style="margin:2px;">
+	<tr>
+    	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_tables-sql_data_structures.drawio.png'  width='80%'/></p>
         </td>
     </tr>
@@ -47,8 +47,8 @@
 ---
 <div>
 <table>
-	  <tr>
-    	  <td style="margin:10px;">
+	<tr>
+    	<td style="margin:10px;">
         	<p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_joins-3-left_joins.drawio.png" width="95%"/></p>
       	</td>
         <td style="margin:10px">
@@ -58,14 +58,14 @@
 </table>
 
 <table>
-  <tr>
-    <td style="margin:10px;">
+    <tr>
+        <td style="margin:10px;">
 	<p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_joins-3-full_joins.drawio.png" width="95%"/></p>
-    </td>
-    <td style="margin:10px">
+        </td>
+        <td style="margin:10px">
 	<p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_joins-3-special_joins.drawio.png" width="95%"/></p>
-    </td>
-  </tr>
+        </td>
+    </tr>
 </table>
 </div>
 
@@ -74,28 +74,14 @@
 ---
 
 <div>
-<p><b>GROUP BY</b>: The GROUP BY clause groups rows based on values of one or more columns:  <code>GROUP BY [column] [ASC | DESC]</code>.</p>
+<table>
+	<tr>
+    	<td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_clauses.drawio.png'  width='80%'/></p>
+        </td>
+    </tr>
+</table>
 </div>
-
-<div>
-<p><b>ORDER BY</b>: The ORDER BY clause sorts results based on values of one or more columns: <code>ORDER BY [column] [ASC | DESC]</code>.</p>
-</div>
-
-<div>
-<p><b>LIMIT</b>: The LIMIT clause determines the [number] rows returned by the query: <code>LIMIT [number]</code>. </p>
-</div>
-
-<div>
-<p><b>OFFSET</b>: The OFFSET clause skips [number] rows before returning query results: <code>OFFSET [number]</code>.</p>
-</div>
-
-<p><code>SELECT                 
-    fruit               
-   ,COUNT(*) AS count   
- FROM fruit_table       
-   GROUP BY fruit       
-   ORDER BY fruit ASC   
-   LIMIT 4 OFFSET 1;   </code></p>
 
 ---
 
