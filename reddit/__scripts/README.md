@@ -39,6 +39,8 @@ For users who want to specify a limited amount of information (i.e., a list of s
 For users who want to specify exact information regarding the type of api calls to be made (e.g., api as 'praw' or 'pushshift', post_limit, post_type, before_days) and/or the type of text pre-processing to be conducted (e.g., 'token' or 'lemma', stopword filtering as 'general' or 'prep' or 'full', NER singularization), and have the script handle the rest (webscraping and text pre-processing), the [scrape_and_clean_reddit_posts.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
 
 ---
+### Search, Scrape and Pre-Process Reddit Text Data 
+---
 
 - #### [search_scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/search_scrape_and_clean_reddit_data.py)
 
