@@ -3,21 +3,21 @@
 
 ---
 
-### Table of Contents
+## Table of Contents
 - <b>[SQL Data Structures](#overview-of-sql-data-structures)</b>
-- <b>DQL</b>
+- <b>[DQL](#dql)</b>
   - <b>[JOINs](#joins)</b>
 ---
 
-### Overview of SQL Data Structures
+## Overview of SQL Data Structures
 
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_tables-sql_data_structures.drawio.png'  width='100%'/></p>
 
 ---
 
-### DQL 
+## DQL 
 
-#### JOINs
+### JOINs
 
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-full_joins.drawio.png'  width='100%'/></p>
 
