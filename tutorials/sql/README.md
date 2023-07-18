@@ -6,27 +6,50 @@
 ## Table of Contents
 - <b>[SQL Data Structures](#overview-of-sql-data-structures)</b>
 - <b>[DQL](#dql)</b>
-  - <b>[JOINs](#joins)</b>
+  - <b>[Table JOINs](#table-joins)</b>
 ---
 
 ## Overview of SQL Data Structures
 
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_tables-sql_data_structures.drawio.png'  width='100%'/></p>
+<div>
+<table>
+	  <tr>
+    	  <td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_tables-sql_data_structures.drawio.png'  width='80%'/></p>
+        </td>
+    </tr>
+</table>
+</div>
 
 ---
 
 ## DQL 
 
-### JOINs
+### Table JOINs
 
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-full_joins.drawio.png'  width='100%'/></p>
+<div>
+<table>
+	  <tr>
+    	  <td style="margin:10px;">
+        	<p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-left_joins.drawio.png" width="95%"/></p>
+      	</td>
+        <td style="margin:10px">
+          <p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-right_joins.drawio.png" width="95%"/></p>
+        </td>
+    </tr>
+</table>
 
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-left_joins.drawio.png'  width='100%'/></p>
-
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-right_joins.drawio.png' width='100%'/></p>
-
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-special_joins.drawio.png'  width='100%'/></p>
-
+<table>
+	  <tr>
+    	  <td style="margin:10px;">
+        	<p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-full_joins.drawio.png" width="95%"/></p>
+      	</td>
+        <td style="margin:10px">
+          <p align='center'><img src="https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/sql_joins-3-special_joins.drawio.png" width="95%"/></p>
+        </td>
+    </tr>
+</table>
+</div>
 
 ---
 
