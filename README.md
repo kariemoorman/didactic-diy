@@ -16,6 +16,9 @@
   - Python: [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [scikit-learn](https://pypi.org/project/scikit-learn/), [bertopic](https://pypi.org/project/bertopic/)
 - <b>Visualization</b>
   - Python: [matplotlib](https://pypi.org/project/matplotlib/), [seaborn](https://pypi.org/project/seaborn/), [plotly](https://pypi.org/project/plotly/), [dash](https://pypi.org/project/dash/)
+- <b>Tutorials</b>
+  - Basics of [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git)
+  - Basics of [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
 
 ---
 ### Projects
