@@ -76,7 +76,7 @@ The Subreddits 'MachineLearning' and 'datascience' are scraped using 'praw' *api
 For users who want to add a list of search query terms to their extract and transform process, [search_scrape_and_clean_reddit_posts.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
 
 ---
-### File Structure for [search_scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/search_scrape_and_clean_reddit_data.py) & [search_scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/search_scrape_and_clean_reddit_data.py)
+### Resultant File Structure 
 
 Both [search_scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/search_scrape_and_clean_reddit_data.py) and [search_scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/search_scrape_and_clean_reddit_data.py) generate a nested subdirectory filepath structure described below:
 
