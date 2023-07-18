@@ -15,7 +15,7 @@
 
 <div>
 <table>
-	<tr>
+    <tr>
     	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_tables-sql_data_structures.drawio.png'  width='80%'/></p>
         </td>
@@ -30,17 +30,21 @@
 ### Window Functions
 ---
 
-#### Aggregate Window Functions 
-
+<div>
+<table>
+    <tr>
+    	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-aggregate_window.drawio.png' width='95%'/></p>
-
-#### Value Window Functions
-
+        </td>
+	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-value_window.drawio.png' width='95%'/></p>
-
-#### Ranking Window Functions
-
+        </td>
+	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-rank_window.drawio.png' width='95%'/></p>
+        </td>
+    </tr>
+</table>
+</div>
 
 ---
 ### Table JOINs
@@ -73,15 +77,16 @@
 ### SQL Clauses
 ---
 
-<div>
+<div align='center'>
 <table>
-	<tr>
+    <tr>
     	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_clauses.drawio.png'  width='80%'/></p>
         </td>
     </tr>
 </table>
 </div>
+
 
 ---
 
