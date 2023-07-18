@@ -14,7 +14,7 @@
 ### Data Pipeline Design
 Description of data pipeline is provided [here](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__data_pipeline). 
 
-<img src="https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__media/images/data_pipelines-reddit_local_pipeline.drawio.png" height="600"/>
+<img src="https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__data_pipeline/images/data_pipelines-reddit_local_pipeline.drawio.png" height="600"/>
 
 --- 
 
