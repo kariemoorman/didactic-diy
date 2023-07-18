@@ -16,16 +16,16 @@
   - Python: [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [scikit-learn](https://pypi.org/project/scikit-learn/), [bertopic](https://pypi.org/project/bertopic/)
 - <b>Visualization</b>
   - Python: [matplotlib](https://pypi.org/project/matplotlib/), [seaborn](https://pypi.org/project/seaborn/), [plotly](https://pypi.org/project/plotly/), [dash](https://pypi.org/project/dash/)
-- <b>Tutorials</b>
-  - Basics of [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git)
-  - Basics of [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
+
 
 ---
 ### Projects
 
 - <b>[Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit)</b>
 - <b>[TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)</b>
-
+- <b>[Tutorials](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials)</b>
+  - Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
+    
 --- 
 
 <p align='center'><b>License: <a href='https://choosealicense.com/licenses/gpl-3.0/'>GNU General Public License v3.0</a></b></p>
