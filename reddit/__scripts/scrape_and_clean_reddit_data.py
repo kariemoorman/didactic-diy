@@ -43,7 +43,7 @@ def scrape_and_clean_reddit_posts(subreddit_list, category, sep='tab', api='praw
     if api == 'pushshift': 
         pushshift_subreddit_activity(subreddit_list, category, before_days, post_limit, sep)
 
-    if api == 'praw': 
+    elif api == 'praw': 
         praw_subreddit_activity(subreddit_list, category, post_type, post_limit, sep)
     
     for subreddit in subreddit_list: 
@@ -53,3 +53,5 @@ def scrape_and_clean_reddit_posts(subreddit_list, category, sep='tab', api='praw
         preprocess_data(data_filepath, category_list=category_list, sep=sep, amznsubdir_list=amznsubdir_list, column_list=column_list,  method=method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)               
 
 
+if __name__ == "__main__":
+    scrape_and_clean_reddit_posts()

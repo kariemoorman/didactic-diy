@@ -3,14 +3,14 @@
 ---
 ### Identify & Extract Reddit User Activity
 ---
-- #### [subreddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-user-activity-scraper.py)
+- #### [subreddit_user_activity_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_user_activity_scraper.py)
 
-The [subreddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit-user-activity-scraper.py) script allows for use of both Reddit's PRAW API (via praw_find_commenters( )) and Pushshift's API (via pushshift_find_commenters( )) to generate a list of Reddit users who provide submissions and comments within a pre-defined set of Subreddits, ordered by frequency.
+The [subreddit_user_activity_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/subreddit_user_activity_scraper.py) script allows for use of both Reddit's PRAW API (via praw_find_commenters( )) and Pushshift's API (via pushshift_find_commenters( )) to generate a list of Reddit users who provide submissions and comments within a pre-defined set of Subreddits, ordered by frequency.
 
 If you wish to identify the most frequent users within a particular Subreddit, use this script.  
 
-- #### [reddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/reddit-user-activity-scraper.py)
-The [reddit-user-activity-scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/reddit-user-activity-scraper.py) script uses Reddit's PRAW API to extract submission and comment activity for a pre-defined set of Reddit users.
+- #### [reddit_user_activity_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/reddit_user_activity_scraper.py)
+The [reddit_user_activity_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/reddit_scraper/reddit_user_activity_scraper.py) script uses Reddit's PRAW API to extract submission and comment activity for a pre-defined set of Reddit users.
 
 If you wish to find the submission and comment history for a particular Reddit user, use this script.
 

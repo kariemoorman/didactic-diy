@@ -6,6 +6,8 @@ import re
 import glob
 import json
 import pandas as pd 
+import csv 
+csv.field_size_limit(sys.maxsize)
 
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
@@ -47,8 +49,8 @@ def remove_hyperlinks(text):
         
     '''
     #remove hyperlinks.
-    text = [re.sub(r'(\(?http\S+\)?)', '', sentence) for sentence in text]
-    text = [re.sub(r'(!\[.*\]\(.*\))', '', sentence) for sentence in text]
+    text = [re.sub(r'(\(?http\S+\)?)', ' ', sentence) for sentence in text]
+    text = [re.sub(r'(!\[.*\]\(.*\))', ' ', sentence) for sentence in text]
     text = [re.sub(r'(\(\/.*\))', '', sentence) for sentence in text]
     return text
 
@@ -115,7 +117,7 @@ def remove_punctuation(text):
     text = [re.sub(r'(\s+)?(\\n\\n\\n|\\n\\n|\\n)', ' ', sentence) for sentence in text]
     text = [re.sub(r'(\s+)?(\n\n\n|\n\n|\n)', ' ', sentence) for sentence in text]
     #remove end punctuation.
-    text = [re.sub(r'([\*\~])|([\.\$\%\?\!\:\*\(\)\_\-\^\>\<\;\=\+\~\[\]\,\|]\B)', ' ', sentence) for sentence in text]
+    text = [re.sub(r'([\*\~])|([\.\.\.|\.\$\%\?\!\:\*\(\)\_\-\^\>\<\;\=\+\~\[\]\,\|]\B)', ' ', sentence) for sentence in text]
     #replace inline punctuation with single space.
     text = [re.sub(r'(\b[\:\*\_\-\^\>\<\=\+\|\/]\b)', ' ', sentence) for sentence in text]
     text = [re.sub(r'([\:\*\_\-\^\>\<\=\+\|\/])', ' ', sentence) for sentence in text]
@@ -192,13 +194,10 @@ def remove_numbers(text):
     text = [re.sub(r'\b([0-9]\.)([0-9]x[0-9]+\"?)?', '', sentence) for sentence in text]
     text = [re.sub(r'\b([0-9]+.?[0-9]+)([a-z]+)\b', '', sentence) for sentence in text]
     text = [re.sub(r'\b([A-Za-z]+?[0-9]+[A-Za-z]+[0-9]+[A-Za-z]+)\b', '', sentence) for sentence in text]
-    #text = [re.sub(r'\b([A-Za-z]+[0-9]+)([A-Za-z]+)? \b', '', sentence) for sentence in text]
     text = [re.sub(r'\b([A-Za-z]+)?([0-9]+)([A-Za-z]+)?\b', '', sentence) for sentence in text]
-    #text = [re.sub(r'([A-Za-z]+[0-9]+)\b', '', sentence) for sentence in text]
     text = [re.sub(r'([A-Z]+[0-9])\w+', '', sentence) for sentence in text]
     text = [re.sub(r'([$]?[0-9]+[%a-z]+?\.? )\b', '', sentence) for sentence in text]
     text = [re.sub(r'([0-9]+[\.,:\-\_]?)([0-9]+)?([a-z]+)?( )?\b', '', sentence) for sentence in text]
-    #text = [re.sub(r'\s[a-z]\b', '', sentence) for sentence in text]
     return text
 
 
@@ -244,7 +243,7 @@ def singularize_plural_noun(text):
     Required python pkgs: 
     (https://spacy.io/usage/)
     - spacy (import spacy)
-    - 'en_core_web_sm' languge model (python -m spacy download en_core_web_sm)
+    - 'en_core_web_sm' language model (python -m spacy download en_core_web_sm)
     
     Function: Transform plural nouns to singular form. 
 
@@ -325,9 +324,6 @@ def clean_text(text, method, singularize='yes', stopwords='yes', stopword_listty
     clean_text(utterance_list, 'token')
     
     '''
-    method = method 
-    singularize = singularize
-    stopword_listtype=stopword_listtype
     
     text = remove_hyperlinks(text)
     text = expand_contractions(text)
@@ -335,7 +331,7 @@ def clean_text(text, method, singularize='yes', stopwords='yes', stopword_listty
     text = ner_reddit(text)
     text = remove_punctuation(text)
  
-    text = list(filter(None, text))
+    # text = list(filter(None, text))
     if method == 'token': 
         text_output = tokenize_text(text)
     elif method == 'lemma': 
@@ -368,8 +364,7 @@ def format_dataset(df):
     return output_df
     
 
-
-def preprocess_text_data(df_filepath, column_list, category, subreddit_name, method, singularize='yes', stopwords='yes', stopword_listtype='general', sep='tab'):
+def preprocess_text_data(df_filepath, category, subreddit_name, method='token', sep='tab', column_list = ['title', 'body', 'comments'], singularize='yes', stopwords='yes', stopword_listtype='general'):
     '''
     Function: Aggregate & regularize input text data. 
     - Aggregate datasets in {df_filepath} using glob.
@@ -401,7 +396,6 @@ def preprocess_text_data(df_filepath, column_list, category, subreddit_name, met
     
     try: 
         if len(glob.glob(f'{df_filepath}/*.csv')) == 0:
-            #CSV names: {list(filter(lambda f: f.endswith(".csv"), os.listdir(df_filepath)))}
             raise TypeError 
         if type(subreddit_name) != str:
             print(f'Error: Specified subreddit ({subreddit_name}) not found!')
@@ -428,19 +422,17 @@ def preprocess_text_data(df_filepath, column_list, category, subreddit_name, met
         if sep =='comma':
             sep=','
     
-    
         snapshotdate = datetime.today().strftime('%d-%b-%Y') 
         snapshotdatetime = datetime.today().strftime('%d-%b-%Y_%H-%M-%S')
         print(f'\nInitializing Text Cleaning Task... \n Category: {category}\n Subreddit: "{subreddit_name}"\n')
         dfs = glob.glob(f'{df_filepath}/*.csv')
-        agg_df = pd.concat([pd.read_csv(fp, header=0, encoding="utf-8") for fp in dfs], ignore_index=True) #, engine='python', sep=None
+        agg_df = pd.concat([pd.read_csv(fp, header=0, encoding="utf-8", engine='python', sep=None) for fp in dfs], ignore_index=True) #, engine='python', sep=None
         agg_format_df = format_dataset(agg_df)
         os.makedirs(f"../__data/__aggregated_posts/{category}/{subreddit_name}/raw/{snapshotdate}/{subreddit_name}_agg_data", exist_ok=True)
         print(f'...Saving aggregated "{subreddit_name}" dataset.\n')
         agg_format_df.to_csv(f'../__data/__aggregated_posts/{category}/{subreddit_name}/raw/{snapshotdate}/{subreddit_name}_agg_data/{subreddit_name}_agg_df_{snapshotdatetime}.csv', index=False, sep=sep)
         clean_df = agg_format_df.reset_index()
         for column in column_list:
-            #column_ls = agg_df[column].dropna(how='any',axis=0).to_list()
             column_ls = clean_df[column].to_list()
             os.makedirs(f"../__data/__aggregated_posts/{category}/{subreddit_name}/raw/{snapshotdate}/{subreddit_name}_{column}_data", exist_ok=True)
             print(f'...Saving aggregated "{subreddit_name}_{column}" text.')
@@ -450,9 +442,10 @@ def preprocess_text_data(df_filepath, column_list, category, subreddit_name, met
                 json.dump(column_ls, f, indent=2)
             if column != 'title': 
                 output_text = remove_usernames(column_ls)
-                output_text = clean_text(column_ls, method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)
+                output_text = clean_text(output_text, method=method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)
             else: 
-                output_text = clean_text(column_ls, method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)
+                output_text = clean_text(column_ls, method=method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)
+            
             clean_df[f'cleaned_{column}'] = output_text
             os.makedirs(f"../__data/__aggregated_posts/{category}/{subreddit_name}/clean/{snapshotdate}/{subreddit_name}_{column}_data", exist_ok=True)
             print(f'...Saving cleaned "{subreddit_name}_{column}" text.')
@@ -466,9 +459,8 @@ def preprocess_text_data(df_filepath, column_list, category, subreddit_name, met
     except TypeError:
         print(f'\nOh no! Seems there is an issue with the input values:\n\n   Input Directory: {df_filepath}\n   Number CSVs: {len(glob.glob(f"{df_filepath}/*.csv"))}\n   Subreddit: {subreddit_name}\n   Category: {category}\n   Method: {method}\n   Dataset separator: {sep}\n   Stopword (y/n): {stopwords}\n   Stopword List: {stopword_listtype}\n   Singularize (y/n): {singularize}')
         print('\nPlease check your input values, and try again.\n')
-    #finally: 
-    #    sys.exit(1)
     
+     
      
             
 if __name__ == "__main__":

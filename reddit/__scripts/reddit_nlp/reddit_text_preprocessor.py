@@ -76,7 +76,7 @@ def preprocess_data(data_filepath, category_list=['all'], subreddit_list=['all']
                 for subreddit in subreddit_list:
                     amazon_subreddit_filepath = f'{amazon_filepath}/{subreddit}'
                     preprocess_amazon_text_data(amazon_subreddit_filepath, column_list=column_list,sep=sep, category=k, subreddit_name=subreddit, method=method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)
-            if k not in amznsubdir_list: 
+            elif k not in amznsubdir_list: 
                 filepath = f'{data_filepath}/{k}'
                 for subreddit in subreddit_list:
                     subreddit_filepath = f'{filepath}/{subreddit}'
@@ -87,6 +87,7 @@ def preprocess_data(data_filepath, category_list=['all'], subreddit_list=['all']
         print('\nPlease check your input values, and try again.\n')
     finally: 
         sys.exit(1)
+
 
 if __name__ == "__main__":
     preprocess_data()
