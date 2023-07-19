@@ -43,7 +43,7 @@ def search_scrape_and_clean_reddit_posts(subreddit_list, search_query_list, cate
     if api == 'pushshift': 
         pushshift_search_subreddit_activity(subreddit_list, search_query_list, category, before_days, post_limit, sep)
     
-    if api == 'praw': 
+    elif api == 'praw': 
         praw_search_subreddit_activity(subreddit_list, search_query_list, category, post_type, post_limit, sep)
     
     for subreddit in subreddit_list: 
@@ -52,3 +52,6 @@ def search_scrape_and_clean_reddit_posts(subreddit_list, search_query_list, cate
         column_list=['title', 'body', 'comments']
         preprocess_data(data_filepath, sep=sep, category_list=category_list, amznsubdir_list=amznsubdir_list, column_list=column_list,  method=method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)  
 
+
+if __name__ == "__main__":
+    search_scrape_and_clean_reddit_posts()

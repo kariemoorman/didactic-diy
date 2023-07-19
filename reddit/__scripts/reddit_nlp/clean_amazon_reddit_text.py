@@ -8,8 +8,8 @@ import json
 import pandas as pd 
 import numpy as np
 
-sys.path.append("/Users/karie/Github/didactic-diy/reddit/__scripts")
-
+import nltk
+#nltk.download('punkt')
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 
@@ -28,7 +28,6 @@ from reddit_nlp.clean_reddit_text import *
 # tokenize text,
 # lemmatize_text,
 # format_dataset
-
 
 
 
@@ -190,7 +189,8 @@ def amazon_ner_reddit(text):
     text = [re.sub(r"\b((P|p)hill?ips )?(H|h)ue\b", "philipshue", sentence) for sentence in text]
     text = [re.sub(r"\bphilipshue (((L|l)ight(bulb| bulb)?s?)|smartlight)\b", "huesmartlight", sentence) for sentence in text]
     text = [re.sub(r"\b(J|j)(B|b)(L|l) speakers?\b", "jblspeaker", sentence) for sentence in text]
-    text = [re.sub(r"\b(L|l)(G|g) ((S|s)mart)?(T|t)(V|v)\b", "lgsmarttv ", sentence) for sentence in text] 
+    text = [re.sub(r"\b(G|g)oogle ((S|s)mart)? ?(T|t)(V|v)\b", "googletv ", sentence) for sentence in text] 
+    text = [re.sub(r"\b(L|l)(G|g) ((S|s)mart)? ?(T|t)(V|v)\b", "lgsmarttv ", sentence) for sentence in text] 
     text = [re.sub(r"\b(R|r)oku (TV|tv|smarttv)\b", "rokutv ", sentence) for sentence in text] 
     text = [re.sub(r"\b(S|s)amsung (TV|tv|smarttv)\b", "samsungtv ", sentence) for sentence in text] 
     text = [re.sub(r"\b(I|i)nsignia (TV|tv|smarttv)\b", "insigniatv ", sentence) for sentence in text] 
@@ -206,7 +206,7 @@ def amazon_ner_reddit(text):
     text = [re.sub(r"\bpi\-hole\b", "pihole", sentence) for sentence in text]
     ## Prime Video Music
     text = [re.sub(r"\b(((AMAZON|Amazon|amazon) (PRIME|Prime|prime) (M|m)usic (U|u)nlimited)|((AMAZON|Amazon|amazon) (PRIME|Prime|prime) (M|m)usic)|((PRIME|Prime|prime) (M|m)usic (U|u)nlimited)|((PRIME|Prime|prime) (M|m)usic))\b", "primemusic", sentence) for sentence in text]
-    text = [re.sub(r"\b(AMAZON|Amazon|amazon) (M|m)usic (U|u)nlimited\b", "primemusic", sentence) for sentence in text]
+    text = [re.sub(r"\b(AMAZON|Amazon|amazon) (M|m)usic( (U|u)nlimited)?\b", "primemusic", sentence) for sentence in text]
     text = [re.sub(r"\b(M|m)usic (U|u)nlimited\b", "primemusic", sentence) for sentence in text]
     text = [re.sub(r"\b((AMAZON|Amazon|amazon) (PRIME|Prime|prime) (V|v)ideo|(PRIME|Prime|prime) (V|v)ideo)\b", "primevideo", sentence) for sentence in text]
     text = [re.sub(r"\b(AMAZON|Amazon|amazon) (PRIME|Prime|prime)\b|\b(PRIME|Prime|prime)\b", "amazonprime", sentence) for sentence in text]
@@ -305,7 +305,7 @@ def clean_amazon_text(text, method, singularize='yes', stopwords='yes', stopword
     return text_output
 
 
-def preprocess_amazon_text_data(df_filepath, category, subreddit_name, sep='tab', method='token', column_list=['title','body','comments'], singularize='yes', stopwords='yes', stopword_listtype='general'):
+def preprocess_amazon_text_data(df_filepath, category, subreddit_name, method='token', column_list=['title','body','comments'], singularize='yes', stopwords='yes', stopword_listtype='general', sep='tab'):
     '''
     Function: Aggregate & regularize input text data. 
     - Aggregate Amazon-specific datasets in {df_filepath} using glob.
@@ -331,8 +331,8 @@ def preprocess_amazon_text_data(df_filepath, category, subreddit_name, sep='tab'
     amazon_filepath = 'reddit/__data/__posts/Amazon/alexa'
     column_list = ['title', 'body', 'comments']
     
-    process_amazon_text_data(df_filepath=amazon_filepath, column_list, category='Amazon', subreddit_name='alexa', method='lemma')
-    process_amazon_text_data(df_filepath=amazon_filepath, column_list, category='Amazon', subreddit_name='alexa', method='token')
+    process_amazon_text_data(df_filepath=amazon_filepath, category='Amazon', subreddit_name='alexa', method='lemma')
+    process_amazon_text_data(df_filepath=amazon_filepath, category='Amazon', subreddit_name='alexa', method='token')
     
     '''
     
@@ -407,4 +407,4 @@ def preprocess_amazon_text_data(df_filepath, category, subreddit_name, sep='tab'
    
     
 if __name__ == "__main__":
-   preprocess_amazon_text_data()
+    preprocess_amazon_text_data()
