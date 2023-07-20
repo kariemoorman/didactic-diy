@@ -103,7 +103,7 @@ def tiktok_selenium_user_video_scraper(username_list, browser):
     # Save DataFrame
     tiktok_df.to_csv(f"../__data/__tiktoks/{username}/{snapshotdate}/{username}_tiktok_videos_{snapshotdatetime}.csv", index=False, sep='\t', encoding='utf-8')
     #Close URL Connection
-    driver.close()
+    driver.quit()
     
     
 if __name__ == "__main__":
