@@ -15,7 +15,21 @@ from selenium.webdriver.common.by import By
 
 
 
-def tiktok_selenium_user_video_scraper(url_list, browser): 
+def tiktok_selenium_user_video_scraper(username_list, browser): 
+    ''' 
+    Definition: 
+    For each URL in URL List, extract username, bio, video URLs and associated video captions.
+    Write results as CSV.
+    
+    Input Values:
+    URL List: list of tiktok user profile URLs. 
+    Browser: Choice of "chrome" or "firefox".
+    
+    Example: 
+    username_list = ['blitzphd', 'eczachly']
+    tiktok_selenium_user_video_scraper(username_list, browser='firefox')
+    
+    '''
     
     # DateTime Snapshot
     snapshotdate = datetime.today().strftime('%d-%b-%Y')
@@ -45,6 +59,7 @@ def tiktok_selenium_user_video_scraper(url_list, browser):
         driver = webdriver.Firefox(options=options)
     
     tiktok_df = pd.DataFrame()
+    url_list = [re.sub(f"{username}",f"https://www.tiktok.com/@{username}", username) for username in username_list]
     for url in url_list: 
         ## Scroll to End of Page ##
         # Open URL
@@ -73,17 +88,18 @@ def tiktok_selenium_user_video_scraper(url_list, browser):
         videos = driver.find_elements(By.XPATH, f"//a[contains(@href,'{url}')]") 
         video_list = [i.get_attribute('href') for i in videos]
         # Extract Video Captions
-        captions = driver.find_elements(By.XPATH, f"//div[contains(@class,'DivContainer')]/img")
-        caption_items = [i.get_attribute('alt') for i in captions]
-        caption_list = [re.sub(r"(    |   |  | )created by ([A-Za-z0-9].*?)( [A-Za-z0-9].*?)? with ([A-Za-z0-9].*?)( [A-Za-z0-9].*?)?\'s original sound", "", i) for i in caption_items]
+#        captions = driver.find_elements(By.XPATH, f"//div[contains(@class,'DivContainer')]/img")
+#        caption_items = [i.get_attribute('alt') for i in captions]
+#        caption_list = [re.sub(r"(    |   |  | )created by ([A-Za-z0-9].*?)( [A-Za-z0-9].*?)? with ([A-Za-z0-9].*?)( [A-Za-z0-9].*?)?\'s original sound", "", i) for i in caption_items]
     # Create Output Directory
     os.makedirs(f"../__data/__tiktoks/{username}/{snapshotdate}", exist_ok=True)
     # Create Dataframe 
     tiktok_df['video_link']= video_list
-    tiktok_df['video_captions']= caption_list
+#    tiktok_df['video_captions']= caption_list
     tiktok_df['user_bio'] = [bio for i in range(len(tiktok_df))]
     tiktok_df['username'] = [username for i in range(len(tiktok_df))]
-    tiktok_df = tiktok_df.iloc[:,[3,2,0,1]]
+#    tiktok_df = tiktok_df.iloc[:,[3,2,0,1]]
+    tiktok_df = tiktok_df.iloc[:,[2,1,0]]
     # Save DataFrame
     tiktok_df.to_csv(f"../__data/__tiktoks/{username}/{snapshotdate}/{username}_tiktok_videos_{snapshotdatetime}.csv", index=False, sep='\t', encoding='utf-8')
     #Close URL Connection
