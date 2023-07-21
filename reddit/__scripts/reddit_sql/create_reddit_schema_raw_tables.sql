@@ -265,11 +265,6 @@ CREATE TABLE IF NOT EXISTS reddit.pushshift_subreddit_user_comment_frequency (
 );
 
 
-/* --- GRANT permissions on Database & Tables to Users --- */ 
-
-GRANT ALL ON reddit.* TO '<username>';
-
-
 /* --- LOAD CSVs into Corresponding Tables --- */ 
 
 /* --- MySQL --- */
