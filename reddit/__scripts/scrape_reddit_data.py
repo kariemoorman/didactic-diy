@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from reddit_scraper.subreddit_lists import * 
 from reddit_scraper.scrape_reddit import scrape_reddit

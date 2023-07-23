@@ -61,15 +61,19 @@ CREATE TABLE IF NOT EXISTS reddit.pushshift_subreddit_comments_text_clean (
 )
 
 
-/* --- GRANT permissions on Database & Tables to Users --- */ 
-
-GRANT ALL ON reddit.* TO '<username>';
-
-
 /* --- LOAD CSVs into Corresponding Tables --- */ 
 
 /* --- MySQL --- */
-LOAD DATA INFILE '<filepath>' INTO TABLE <table_name>;
+LOAD DATA INFILE '<filepath>' 
+INTO TABLE <table_name>
+FIELDS TERMINATED BY '\t'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
 
 /* --- PostgreSQL --- */
-COPY <table_name> FROM '<filepath>' WITH (FORMAT csv);
+COPY <table_name> 
+FROM '<filepath>' 
+WITH (FORMAT csv)
+DELIMITER '\t'
+CSV HEADER;

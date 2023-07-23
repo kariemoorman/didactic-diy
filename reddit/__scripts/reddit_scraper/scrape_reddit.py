@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from reddit_scraper.subreddit_scraper import praw_subreddit_activity, pushshift_subreddit_activity 
 from reddit_scraper.subreddit_search_scraper import praw_search_subreddit_activity, pushshift_search_subreddit_activity

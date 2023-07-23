@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os,sys
 from reddit_nlp.clean_amazon_reddit_text import preprocess_amazon_text_data
