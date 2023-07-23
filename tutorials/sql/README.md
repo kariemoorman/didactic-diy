@@ -29,7 +29,8 @@
 
 ## DCL 
 
-### Database Access Privileges
+<h3 align='center'>Database Access Privileges</h3>
+
 ---
 <div align='center'>
 <table>
@@ -44,7 +45,8 @@
 
 ## DQL 
 
-### Window Functions
+<h3 align='center'>Window Functions</h3>
+
 ---
 
 <div>
@@ -63,8 +65,9 @@
 </table>
 </div>
 
----
-### Table JOINs
+
+<h3 align='center'>Table JOINs</h3>
+
 ---
 <div>
 <table>
@@ -90,8 +93,9 @@
 </table>
 </div>
 
----
-### SQL Clauses
+
+<h3 align='center'>SQL Clauses</h3>
+
 ---
 
 <div align='center'>
