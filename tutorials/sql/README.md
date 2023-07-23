@@ -5,6 +5,8 @@
 
 ## Table of Contents
 - <b>[SQL Data Structures](#overview-of-sql-data-structures)</b>
+- <b>[DCL](#dcl)</b>
+  - <b>[Database Access Privileges](#database-access-privileges)</b>
 - <b>[DQL](#dql)</b>
   - <b>[Window Functions: Aggregate, Value, Ranking](#window-functions)</b>
   - <b>[Table JOINs: Left, Right, Inner, Outer, Special](#table-joins)</b>
@@ -24,6 +26,21 @@
 </div>
 
 ---
+
+## DCL 
+
+### Database Access Privileges
+---
+<div align='center'>
+<table>
+    <tr>
+    	<td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_access_privileges.drawio.png'  width='80%'/></p>
+        </td>
+    </tr>
+</table>
+</div>
+
 
 ## DQL 
 
