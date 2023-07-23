@@ -9,6 +9,7 @@ TikTok.</h4>
   - [tiktok_user_video_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_scraper/tiktok_user_video_scraper.py)  
     Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok usernames.  
       E.g., ```python3 tiktok_user_video_scraper.py blitzphd eczachly --b pyppeteer --o csv```
+
     
 - <b>Sample Datasets</b>: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
 
