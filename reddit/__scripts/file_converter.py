@@ -12,22 +12,18 @@ import zstandard as zstd
 class FileConverter:
     '''
     Definition: 
-    Takes in an input file (CSV, Parquet, JSON) and converts it to ZST.
-    If no output 'filepath/output_file.zst' is specified, the input filepath and filename are used, with .zst extension.
+    Takes in an input file (CSV, Parquet, JSON) and converts it to (ZST, CSV, Parquet, JSON).
+    When no output {output_file_format} is specified, default is .zst format.
     
-
     Examples: 
-    (1) Manually specify only input filepath and filename.
+    (1) Manually specify only {input_file} filepath, omitting {output_file_format}.
     
-    input_file = 'path/to/input_filename.csv'
-    python3 file_converter.py input_file
+    python3 file_converter.py -i 'path/to/input_filename.csv'
     (Output file written to 'path/to/input_filename.zst')
 
-    (2) Manually specify both input and output filepath and filename.
-    
-    input_file = 'path/to/input_filename.csv'
-    output_file_format = 'json'
-    python3 file_converter.py input_file output_file_format
+    (2) Manually specify both {input_file} filepath and {output_file_format}.
+
+    python3 file_converter.py -i 'path/to/input_filename.csv' -o json
     (Output file written to 'path/to/input_filename.json')
 
     '''
@@ -50,7 +46,7 @@ class FileConverter:
         # Read CSV data
         df = pd.read_csv(input_file)
         # Convert DataFrame to CSV string
-        csv_data = df.to_csv(index=False) ## ??
+        csv_data = df.to_csv(index=False) 
 
         if output_file_format == 'zst':
             # Compress the CSV data using Zstandard
@@ -61,7 +57,7 @@ class FileConverter:
         
         elif output_file_format == 'json': 
             json_data = df.to_json(orient='records')
-            with open(output_file, 'w') as json_file:
+            with open(output_file, 'w', encoding='utf-8') as json_file:
                 json_file.write(json_data)
 
         elif output_file_format == 'parquet': 
@@ -91,7 +87,7 @@ class FileConverter:
 
         elif output_file_format == 'json': 
             json_data = df.to_json(orient='records')
-            with open(output_file, 'w') as json_file:
+            with open(output_file, 'w', encoding='utf-8') as json_file:
                 json_file.write(json_data)
 
         elif output_file_format == 'parquet': 
@@ -101,9 +97,9 @@ class FileConverter:
 
     def _json_to_format(self, input_file, output_file, output_file_format):
         # Read JSON data
-        with open(input_file, 'r') as f:
-            json_data = json.load(f)
-        # Convert Python dictionary to pandas DataFrame    
+        with open(input_file, 'r', encoding='utf-8') as input_data:
+            json_data = json.load(input_data)
+        # Convert Python dictionary to pandas DataFrame
         df = pd.DataFrame(json_data)
         # Convert JSON data to string
         json_string = json.dumps(json_data)
@@ -111,8 +107,8 @@ class FileConverter:
         if output_file_format == 'zst':
             # Compress the JSON data using Zstandard
             cctx = zstd.ZstdCompressor()
-            with open(output_file, 'wb') as f:
-                with cctx.stream_writer(f) as compressor:
+            with open(output_file, 'wb') as output_data:
+                with cctx.stream_writer(output_data) as compressor:
                     compressor.write(json_string.encode('utf-8'))
         
         elif output_file_format == 'parquet': 
@@ -130,13 +126,14 @@ class FileConverter:
             raise ValueError(f"Conversion to {output_file_format} is not supported.")
 
     def convert_to_format(self, input_file, output_file_format=None):
+        
         input_file_format = self._detect_format(input_file)
 
         # If output file not specified, use input file name with Zstandard extension
         if output_file_format is None:
-            output_file = os.path.splitext(input_file)[0] + ".zst"
+            output_file = os.path.splitext(input_file)[0] + f".{input_file_format}" + ".zst"
         else:
-            output_file = os.path.splitext(input_file)[0] + f".{output_file_format}"
+            output_file = os.path.splitext(input_file)[0] + f".{input_file_format}" + f".{output_file_format}"
 
         if input_file_format == "csv":
             self._csv_to_format(input_file, output_file, output_file_format)
@@ -148,8 +145,8 @@ class FileConverter:
 
 def main():
     parser = argparse.ArgumentParser(description="Convert CSV, Parquet, or JSON files to Zstandard format.")
-    parser.add_argument("input_file", type=str, help="Path to the input file.")
-    parser.add_argument("output_file_format", type=str, nargs="?", choices=["zst", "json", "csv", "parquet"], help="Output file format (optional; default is None: zst).")
+    parser.add_argument("--input_file", "-i", type=str, help="Path to the input file.")
+    parser.add_argument("--output_file_format", "-o", type=str, choices=["zst", "json", "csv", "parquet"], default='zst', help="Output file format (optional; default is 'zst').")
 
     args = parser.parse_args()
 
