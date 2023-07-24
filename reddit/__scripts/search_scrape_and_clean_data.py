@@ -38,8 +38,8 @@ class SubredditSearchDataProcessor:
 
 def main():
     parser = argparse.ArgumentParser(description="Search, Scrape, and Clean Reddit Posts")
-    parser.add_argument("subreddits", nargs="+", help="List of subreddits")
-    parser.add_argument("--search_query_items", "-q", nargs="+", help="List of search queries")
+    parser.add_argument("subreddits", type=str, nargs="+", help="List of subreddits")
+    parser.add_argument("--search_query_items", "-q", type=str, nargs="+", help="List of search queries")
     parser.add_argument("--category", "-c", type=str, help="Name of the output directory (e.g., DataScience)")
     parser.add_argument("--sep", type=str, choices=["tab", "comma"], default="tab", help="Separator for the CSV output")
     parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API selection (praw, pushshift, or pullpush)")
