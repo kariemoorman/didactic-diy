@@ -9,9 +9,9 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from credentials import my_client_id, my_client_secret, my_user_agent, my_password, my_username
+from credentials import *
 
-class RedditSubredditSearchScraper:
+class SubredditSearchScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
         self.subreddits = subreddits
         self.category = category
@@ -19,7 +19,7 @@ class RedditSubredditSearchScraper:
         self.output_format = output_format
 
         ## Establish Reddit Connection ##
-        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent, username=my_username, password=my_password)
+        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
 
         ## Datetime Snapshot ##
         self.snapshotdate = datetime.today().strftime('%d-%b-%Y')
@@ -143,5 +143,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    scraper = RedditSubredditSearchScraper(args.subreddits, args.category, args.sep, args.output_format)
+    scraper = SubredditSearchScraper(args.subreddits, args.category, args.sep, args.output_format)
     scraper.extract_search_subreddit_data(args.query_items, args.post_type, args.api, args.before_days, args.post_limit)

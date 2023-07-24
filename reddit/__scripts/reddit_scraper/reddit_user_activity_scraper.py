@@ -8,7 +8,7 @@ import pandas as pd
 import praw
 
 ## Add credentials.py script to .gitignore list to keep personal keys safe. ##
-from credentials import my_client_id, my_client_secret, my_user_agent, my_password, my_username
+from credentials import *
 
 
 ## Date and Datetime Snapshot ##
@@ -22,7 +22,7 @@ class RedditUserActivityScraper:
         self.output_format = output_format
 
         ## Establish Reddit Connection ##
-        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent, username=my_username, password=my_password)
+        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
 
         ## Datetime Snapshot ##
         self.snapshotdate = datetime.today().strftime('%d-%b-%Y')
