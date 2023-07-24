@@ -15,8 +15,8 @@ from credentials import my_client_id, my_client_secret, my_user_agent, my_passwo
 snapshotdate = datetime.today().strftime('%d-%b-%Y_%H-%M-%S')
 
 
-class RedditUserActivity: 
-    def __init__(self, post_type='new', post_limit=1000, output_format='csv'): 
+class RedditUserActivityScraper: 
+    def __init__(self, post_type='new', post_limit=1000, output_format='csv'):
         self.post_type = post_type
         self.post_limit = post_limit
         self.output_format = output_format
@@ -75,7 +75,7 @@ def main():
     
     args = parser.parse_args()
 
-    scraper = RedditUserActivity(args.post_type, args.post_limit)
+    scraper = RedditUserActivityScraper(args.post_type, args.post_limit)
     scraper.extract_user_activity(args.usernames)
 
 if __name__ == "__main__":
