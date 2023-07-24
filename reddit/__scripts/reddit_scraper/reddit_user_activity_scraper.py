@@ -3,10 +3,8 @@
 import os
 import time
 import argparse
-import json
 from datetime import datetime
 import pandas as pd
-import requests
 import praw
 
 ## Add credentials.py script to .gitignore list to keep personal keys safe. ##
