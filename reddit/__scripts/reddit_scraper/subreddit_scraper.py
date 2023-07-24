@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import os
+import time
 import argparse
 import json
 from datetime import datetime
@@ -9,7 +10,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from reddit_scraper.credentials import *
+from credentials import *
 
 class SubredditScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
@@ -66,6 +67,7 @@ class SubredditScraper:
                     post_df.to_csv(f'../__data/__posts/{self.category}/{subreddit}/{subreddit}_subreddit_{post_type}_posts_{self.snapshotdatetime}.csv', index=False, sep=delimiter)
                 else: 
                     print('Unsupported file format specified.')
+            time.sleep(60)
 
     def _pushshift_subreddit_activity(self, api, before_days, post_limit):
         if self.sep == 'tab':

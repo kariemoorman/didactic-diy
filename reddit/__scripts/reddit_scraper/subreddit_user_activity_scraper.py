@@ -11,7 +11,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from reddit.credentials import *
+from credentials import *
 
 class SubredditUserActivityScraper:
     def __init__(self, subreddits, category):
