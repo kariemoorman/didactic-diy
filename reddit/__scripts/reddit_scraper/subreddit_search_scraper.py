@@ -52,8 +52,8 @@ class SubredditSearchScraper:
                     for comment in submission.comments.list():
                         comments.append(f'{comment.author}: {comment.body}')
                     ## Transform posts data to pandas DataFrame.
-                    posts.append([post.created_utc, created_pst, post_type, search_item, post.subreddit, post.id, post.title, post.author, post.score, post.url, post.selftext, post.num_comments, comments])
-                    post_df = pd.DataFrame(posts, columns=['created_unix_utc', 'created_datetime_pst', 'post_type', 'search_item', 'subreddit', 'id', 'title', 'author', 'score', 'url', 'body', 'num_comments', 'comments'])
+                    posts.append([post.created_utc, created_pst, search_item, post.subreddit, post.id, post.title, post.author, post.score, post.url, post.selftext, post.num_comments, comments])
+                    post_df = pd.DataFrame(posts, columns=['created_unix_utc', 'created_datetime_pst', 'search_item', 'subreddit', 'id', 'title', 'author', 'score', 'url', 'body', 'num_comments', 'comments'])
                     ## Write DataFrame to output directory based on output format.
                     if self.output_format == 'parquet':
                         post_df.to_parquet(f'../__data/__posts/{self.category}/{subreddit}/{subreddit}_subreddit_search_{post_type}_posts_{self.snapshotdatetime}.parquet', index=False)
