@@ -107,14 +107,14 @@ class SubredditSearchScraper:
                     subreddit_search_comments_df = pd.concat([subreddit_search_comments_df,subreddit_comments_df], ignore_index=True)
             ## Write DataFrames to output directory based on output format.
             if self.output_format == 'parquet':
-                subreddit_search_comments_df.to_parquet(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.parquet', index=False)
-                subreddit_search_submissions_df.to_parquet(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_submissions_{before_days}_{self.snapshotdatetime}.parquet', index=False)
+                subreddit_search_comments_df.to_parquet(f'../__data/__posts/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.parquet', index=False)
+                subreddit_search_submissions_df.to_parquet(f'../__data/__posts/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_submissions_{before_days}_{self.snapshotdatetime}.parquet', index=False)
             elif self.output_format == 'json':
-                subreddit_search_comments_df.to_json(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.json', orient='records')
-                subreddit_search_submissions_df.to_json(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_submissions_{before_days}_{self.snapshotdatetime}.json', orient='records')
+                subreddit_search_comments_df.to_json(f'../__data/__posts/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.json', orient='records')
+                subreddit_search_submissions_df.to_json(f'../__data/__posts/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_submissions_{before_days}_{self.snapshotdatetime}.json', orient='records')
             elif self.output_format == 'csv':
-                subreddit_search_comments_df.to_csv(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.csv', index=False, sep=delimiter)
-                subreddit_search_submissions_df.to_csv(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_submissions_{before_days}_{self.snapshotdatetime}.csv', index=False, sep=delimiter)
+                subreddit_search_comments_df.to_csv(f'../__data/__posts/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.csv', index=False, sep=delimiter)
+                subreddit_search_submissions_df.to_csv(f'../__data/__posts/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_submissions_{before_days}_{self.snapshotdatetime}.csv', index=False, sep=delimiter)
             else: 
                 print('Unsupported file format specified.')
 
