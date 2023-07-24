@@ -1,59 +1,67 @@
 #!/usr/bin/python3
 
-#import os, sys
-#sys.path.insert(0, 'reddit/__scripts')
-
-from reddit_scraper.subreddit_lists import * 
+import argparse
+from reddit_scraper.subreddit_lists import *
 from reddit_nlp.reddit_text_preprocessor import preprocess_data
 from reddit_scraper.subreddit_search_scraper import SubredditSearchScraper
 
 
-def search_scrape_and_clean_reddit_posts(subreddit_list, search_query_list, category, sep='tab', api='praw', post_type='new', before_days='0d', post_limit=1000, amznsubdir_list=['Amazon','AmazonAlexa','AmazonPrimeAV','AmazonSmartHome'], method='token', singularize='yes', stopwords='yes', stopword_listtype='general'): 
+class SubredditSearchDataProcessor:
+    def __init__(self, subreddits, search_query_items, category, sep='tab', api='praw', post_type='new', before_days='0d', post_limit=1000, amznsubdir_list=['Amazon', 'AmazonAlexa', 'AmazonPrimeAV', 'AmazonSmartHome'], method='token', singularize='yes', stopwords='yes', stopword_listtype='general'):
+        self.subreddits = subreddits
+        self.search_query_items = search_query_items
+        self.category = category
+        self.sep = sep
+        self.api = api
+        self.post_type = post_type
+        self.before_days = before_days
+        self.post_limit = post_limit
+        self.amznsubdir_list = amznsubdir_list
+        self.method = method
+        self.singularize = singularize
+        self.stopwords = stopwords
+        self.stopword_listtype = stopword_listtype
 
-    '''
-    Function: Gather Reddit data from {subreddit_list} where {search_query_list} items occur, and pre-process text data.
-    - Scrape Reddit Subreddit(s) in {subreddit_list}, querying by {search_query_list} items, using either Praw (praw_subreddit_activity()) or Pushshift API (pushshift_subreddit_activity()).
-    - Write output to '__data/__posts/{category}/{subreddit}'.
-    - Pre-process text data using process_data().
-    - Write aggregated data to '__data/__aggregated_posts/{category}/{subreddit}'.
-    
-    Input Arguments: 
-    subreddit_list: input type is (list) of (str).
-    search_query_list: input type is (list) of (str).
-    category: input type is (str), denoting output subdirectory name.
-    sep: input type is (str), 'tab' or 'comma'. Default='tab'.
-    api: input type is (str), either 'praw' or 'pushshift'. Default = 'praw'.
-    post_type: input type is (str) item, 'hot', 'new', or 'top'. Default = 'new'. (For use with Praw API)
-    before_days: input type is (str) number of days, between 0 and 100 (e.g., '10d'), trailing {snapshotdate}. Default = '0d'. (For use with Pushshift API)
-    post_limit: input type is (int), between 1 - 1000 (1000 is max). Default = 1000.
-    amznsubdir_list: input type is list of (str) items, denoting output subdirectory name(s) with Amazon-specific datasets. Default = ['Amazon','AmazonAlexa','AmazonPrimeAV','AmazonSmartHome'].
-    method: input type is (str) item, 'token' or 'lemma'. Default = 'token'.
-    singularize: input type is (str) item, 'yes' or 'no'. Default = 'yes'.
-    stopwords: input type is (str) item, 'yes' or 'no'. Default = 'yes'.
-    stoplist_type: input type is (str) item, 'simple' (no prepositions), 'prep' (prepositions only), 'full' (both). Default = 'general'.
-    
-    Example: 
-    subreddit_gen_items = ['technology', 'privacy', 'cybersecurity', 'MachineLearning', 'Economics', 'Futurology', 'news']
-    tech_company_search_items = ['Apple', 'Palantir', 'OpenAI', 'Google', 'Accenture', 'Microsoft', 'Azure', 'Amazon', 'AWS', 'Facebook', 'Meta', 'Tiktok', 'Mastodon', 'Instagram', 'Metaverse', 'Tesla', 'Twitter', 'Spotify', 'Samsung', 'Oracle']
+    def process_data(self):
+        ## Search and Scrape Subreddits
+        scraper = SubredditSearchScraper(self.subreddits, self.category, self.sep, output_format='csv')
+        scraper.extract_search_subreddit_data(self.search_query_items, api=self.api, post_type=self.post_type, before_days=self.before_days, post_limit=self.post_limit)
+        ## Preprocess Text Data
+        for subreddit in self.subreddits:
+            data_filepath = f'../__data/__posts'
+            category_list = [self.category]
+            column_list = ['title', 'body', 'comments']
+            preprocess_data(data_filepath, sep=self.sep, category_list=category_list, amznsubdir_list=self.amznsubdir_list,
+                            column_list=column_list, method=self.method, singularize=self.singularize,
+                            stopwords=self.stopwords, stopword_listtype=self.stopword_listtype)
 
-    search_scrape_and_clean_reddit_posts(subreddit_gen_items, tech_company_search_items, category='Technology',api='praw')
-    
-    '''
-    scraper = SubredditSearchScraper(subreddit_list, category, sep, output_format='csv')
-  
-    if api in ['pushshift', 'pullpush']: 
-        scraper.extract_search_subreddit_data(search_query_list, api=api, before_days=before_days, post_limit=post_limit)
-    elif api == 'praw': 
-        scraper.extract_search_subreddit_data(search_query_list, post_type=post_type, post_limit=post_limit)
-    else: 
-        print("Unsupported API specified.")
-    
-    for subreddit in subreddit_list: 
-        data_filepath = f'../__data/__posts/{category}/{subreddit}'
-        category_list = [category]
-        column_list=['title', 'body', 'comments']
-        preprocess_data(data_filepath, sep=sep, category_list=category_list, amznsubdir_list=amznsubdir_list, column_list=column_list,  method=method, singularize=singularize, stopwords=stopwords, stopword_listtype=stopword_listtype)  
+
+def main():
+    parser = argparse.ArgumentParser(description="Search, Scrape, and Clean Reddit Posts")
+    parser.add_argument("subreddits", nargs="+", help="List of subreddits")
+    parser.add_argument("--search_query_items", "-q", nargs="+", help="List of search queries")
+    parser.add_argument("--category", "-c", type=str, help="Name of the output directory (e.g., DataScience)")
+    parser.add_argument("--sep", type=str, choices=["tab", "comma"], default="tab", help="Separator for the CSV output")
+    parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API selection (praw, pushshift, or pullpush)")
+    parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve, for use with Praw API")
+    parser.add_argument("--before_days", "-b", type=str, default="0d", help="Number of trailing days (e.g., 10d), for use with Pushshift/Pullpush API")
+    parser.add_argument("--post_limit", "-l", type=int, default=1000, help="Number of posts to retrieve (1-1000)")
+    parser.add_argument("--amznsubdirs", nargs="+", default=['Amazon', 'AmazonAlexa', 'AmazonPrimeAV', 'AmazonSmartHome'], help="List of Amazon-specific subdirectories")
+    parser.add_argument("--method", type=str, choices=["token", "lemma"], default="token", help="Text preprocessing method")
+    parser.add_argument("--singularize", type=str, choices=["yes", "no"], default="yes", help="Singularize words during preprocessing")
+    parser.add_argument("--stopwords", type=str, choices=["yes", "no"], default="yes", help="Apply stopwords during preprocessing")
+    parser.add_argument("--stopword_listtype", type=str, choices=["simple", "prep", "full"], default="general", help="Stopword list type during preprocessing")
+
+    args = parser.parse_args()
+
+    processor = SubredditSearchDataProcessor(args.subreddits, args.search_query_items, args.category, args.sep, args.api,
+                                    args.post_type, args.before_days, args.post_limit, args.amznsubdirs,
+                                    args.method, args.singularize, args.stopwords, args.stopword_listtype)
+    processor.process_data()
 
 
 if __name__ == "__main__":
-    search_scrape_and_clean_reddit_posts()
+    main()
+    
+    
+# python search_scrape_and_clean_data.py datascience MachineLearning -q GPT -c TEST -l 10

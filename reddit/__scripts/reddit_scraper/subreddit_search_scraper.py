@@ -9,7 +9,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from credentials import *
+from reddit_scraper.credentials import *
 
 class SubredditSearchScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
@@ -25,7 +25,7 @@ class SubredditSearchScraper:
         self.snapshotdate = datetime.today().strftime('%d-%b-%Y')
         self.snapshotdatetime = datetime.today().strftime('%d-%b-%Y_%H-%M-%S')
 
-    def _praw_search_subreddit_activity(self, query_items, post_type, post_limit):
+    def _praw_search_subreddit_activity(self, search_query_items, post_type, post_limit):
         if self.sep == 'tab':
             delimiter = '\t'
         elif self.sep == 'comma':
@@ -38,7 +38,7 @@ class SubredditSearchScraper:
             os.makedirs(f"../__data/__posts/{self.category}/{subreddit}", exist_ok=True)
             ## Extract subreddit posts (submissions and comments).
             posts = []
-            for search_item in query_items:
+            for search_item in search_query_items:
                 ## Print task status message.
                 print(f'Gathering "{post_type}" posts for search item: "{search_item}" in "{subreddit}" Subreddit...')
                 ## Extract subreddit posts (submissions and comments).
@@ -64,7 +64,7 @@ class SubredditSearchScraper:
                     else: 
                         print('Unsupported file format specified.')
 
-    def _pushshift_search_subreddit_activity(self, query_items, api, before_days, post_limit):
+    def _pushshift_search_subreddit_activity(self, search_query_items, api, before_days, post_limit):
         if self.sep == 'tab':
             delimiter = '\t'
         elif self.sep == 'comma':
@@ -75,7 +75,7 @@ class SubredditSearchScraper:
             print(f'Gathering {post_limit} {before_days}-trailing posts for Subreddit: "{subreddit}"...')
             subreddit_search_submissions_df = pd.DataFrame()
             subreddit_search_comments_df = pd.DataFrame()
-            for search_item in query_items: 
+            for search_item in search_query_items: 
                 ## Print task status message.
                 print(f'Querying "{search_item}" in Subreddit: "{subreddit}"...')
                 ## Load submissions and comments from {subreddit} using Pushshift API.
@@ -119,11 +119,11 @@ class SubredditSearchScraper:
                 print('Unsupported file format specified.')
 
 
-    def extract_search_subreddit_data(self, query_items, post_type='new', api='praw', before_days='0d', post_limit=1000):
+    def extract_search_subreddit_data(self, search_query_items, post_type='new', api='praw', before_days='0d', post_limit=1000):
         if api == 'praw':
-            self._praw_search_subreddit_activity(query_items, post_type, post_limit)
+            self._praw_search_subreddit_activity(search_query_items, post_type, post_limit)
         elif api in ['pushshift','pullpush']:
-            self._pushshift_search_subreddit_activity(query_items, api, before_days, post_limit)
+            self._pushshift_search_subreddit_activity(search_query_items, api, before_days, post_limit)
         else: 
             print("Unsupported API specified.")
         print("Task Complete!")
@@ -133,7 +133,7 @@ def main():
     parser = argparse.ArgumentParser(description="Reddit Scraper")
     parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API ('praw' or 'pushshift')")
     parser.add_argument("subreddits", type=str, nargs="+", help="List of subreddits")
-    parser.add_argument("--query_items", '-q', type=str, nargs="+", help="List of search query items")
+    parser.add_argument("--search_query_items", '-q', type=str, nargs="+", help="List of search query items")
     parser.add_argument("--category", "-c", type=str, help="Category for the output directory")
     parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve")
     parser.add_argument("--before_days", "-b", type=str, default="0d", help="Type of posts to retrieve")
@@ -144,7 +144,7 @@ def main():
     args = parser.parse_args()
 
     scraper = SubredditSearchScraper(args.subreddits, args.category, args.sep, args.output_format)
-    scraper.extract_search_subreddit_data(args.query_items, args.post_type, args.api, args.before_days, args.post_limit)
+    scraper.extract_search_subreddit_data(args.search_query_items, args.post_type, args.api, args.before_days, args.post_limit)
 
 if __name__ == "__main__":
     main()
