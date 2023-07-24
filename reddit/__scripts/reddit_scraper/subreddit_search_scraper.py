@@ -129,11 +129,11 @@ class SubredditSearchScraper:
         print("Task Complete!")
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Reddit Scraper")
     parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API ('praw' or 'pushshift')")
-    parser.add_argument("subreddits", nargs="+", help="List of subreddits")
-    parser.add_argument("--query_items", '-q', nargs="+", help="List of search query items")
+    parser.add_argument("subreddits", type=str, nargs="+", help="List of subreddits")
+    parser.add_argument("--query_items", '-q', type=str, nargs="+", help="List of search query items")
     parser.add_argument("--category", "-c", type=str, help="Category for the output directory")
     parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve")
     parser.add_argument("--before_days", "-b", type=str, default="0d", help="Type of posts to retrieve")
@@ -145,3 +145,6 @@ if __name__ == "__main__":
 
     scraper = SubredditSearchScraper(args.subreddits, args.category, args.sep, args.output_format)
     scraper.extract_search_subreddit_data(args.query_items, args.post_type, args.api, args.before_days, args.post_limit)
+
+if __name__ == "__main__":
+    main()

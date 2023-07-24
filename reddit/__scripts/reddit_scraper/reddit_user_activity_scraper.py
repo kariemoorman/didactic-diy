@@ -52,7 +52,7 @@ class RedditUserActivityScraper:
                 c_created_pst = datetime.fromtimestamp(comment.created_utc).strftime('%d-%b-%Y %H:%M:%S')
                 comments_ls.append([comment.created_utc, c_created_pst, self.post_type, username, comment.subreddit, comment.body, comment.permalink])
             comment_df = pd.DataFrame(comments_ls, columns=['created_unix_utc', 'created_pst', 'post_type', 'commenter_name', 'subreddit', 'comment', 'reddit_permalink'])
-            comment_df.to_csv(f'../__data/__users/usernames/{username}/{username}_subreddit_comments_{self.post_type}_{self.snapshotdate}.csv', index=False, sep='\t')
+            comment_df.to_csv(f'../__data/__users/usernames/{username}/{username}_subreddit_comments_{self.post_type}_{self.snapshotdatetime}.csv', index=False, sep='\t')
             for submission in submissions: 
                 s_created_pst = datetime.fromtimestamp(submission.created_utc).strftime('%d-%b-%Y %H:%M:%S')
                 submission_comments_agg = []
@@ -62,14 +62,14 @@ class RedditUserActivityScraper:
                     submission_comments_agg.append(f'{submission_comment.author}: {submission_comment.body}')  
                 submissions_ls.append([submission.created_utc, s_created_pst, self.post_type, username, submission.subreddit, submission.id, submission.title, submission.selftext, submission.num_comments, submission_comments_agg, submission.url])
             submission_df = pd.DataFrame(submissions_ls, columns=['created_unix_utc', 'created_pst', 'post_type', 'username', 'subreddit', 'id', 'title', 'body', 'num_comments', 'submission_comments', 'reddit_permalink'])
-            submission_df.to_csv(f'../__data/__users/usernames/{username}/{username}_subreddit_submissions_{self.post_type}_{self.snapshotdate}.csv', index=False, sep='\t')
+            submission_df.to_csv(f'../__data/__users/usernames/{username}/{username}_subreddit_submissions_{self.post_type}_{self.snapshotdatetime}.csv', index=False, sep='\t')
             time.sleep(40)
         print("Task is Complete!")
  
 
 def main(): 
     parser = argparse.ArgumentParser(description="Reddit User Activity Scraper")
-    parser.add_argument("usernames", nargs="+", help="List of usernames")
+    parser.add_argument("usernames", type=str, nargs="+", help="List of usernames")
     parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve")
     parser.add_argument("--post_limit", "-l", type=int, default=1000, help="Limit of posts to retrieve (1-1000)")
     
