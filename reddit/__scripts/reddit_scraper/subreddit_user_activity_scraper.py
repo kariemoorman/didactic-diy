@@ -56,8 +56,8 @@ class SubredditUserActivityScraper:
             commenters_output_df = pd.DataFrame({"query_date": self.snapshotdate, "subreddit": subreddit, "comment_author": c.keys(), "comment_frequency": c.values()})
             submitters_output_df = pd.DataFrame({"query_date": self.snapshotdate, "subreddit": subreddit, "submission_author": s.keys(), "submission_frequency": s.values()})
             #Write Frequency Results as CSV
-            commenters_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/{self.snapshotdate}/praw/{subreddit}_username_commenters_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
-            submitters_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/{self.snapshotdate}/praw/{subreddit}_username_submitters_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
+            commenters_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/praw/{subreddit}_username_commenters_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
+            submitters_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/praw/{subreddit}_username_submitters_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
             time.sleep(5)
 
     def _pushshift_find_commenters(self, api, before_days, post_limit):
@@ -80,8 +80,8 @@ class SubredditUserActivityScraper:
             comment_output_df = pd.DataFrame({"query_date": self.snapshotdate, "before_date": before_days,"subreddit": subreddit, "comment_author": c.keys(), "comment_frequency": c.values()})
             submission_output_df = pd.DataFrame({"query_date": self.snapshotdate, "before_date": before_days,"subreddit": subreddit, "submission_author": s.keys(), "submission_frequency": s.values()})
             #Write Frequency Results as CSV
-            comment_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/{self.snapshotdate}/ps/{subreddit}_subreddit_commenters_{before_days}_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
-            submission_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/{self.snapshotdate}/ps/{subreddit}_subreddit_submitters_{before_days}_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
+            comment_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/ps/{subreddit}_subreddit_commenters_{before_days}_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
+            submission_output_df.to_csv(f'../__data/__users/subreddit_users/{self.category}/{subreddit}/ps/{subreddit}_subreddit_submitters_{before_days}_{self.snapshotdatetime}.csv', index=False, sep='\t', encoding='utf-8')
             time.sleep(5)
 
     def extract_subreddit_user_activity(self, api='praw', before_days='0d', post_limit=1000):
