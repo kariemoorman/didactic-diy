@@ -11,7 +11,7 @@ import praw
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
 from credentials import my_client_id, my_client_secret, my_user_agent, my_password, my_username
 
-class RedditSubredditScraper:
+class SubredditScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
         self.subreddits = subreddits
         self.category = category
@@ -104,7 +104,6 @@ class RedditSubredditScraper:
 
 
     def extract_subreddit_data(self, post_type='new', api='praw', before_days='0d', post_limit=1000):
-        print(api, self.category)
         if api == 'praw':
             self._praw_subreddit_activity(post_type, post_limit)
         elif api in ['pushshift', 'pullpush']:
@@ -115,19 +114,19 @@ class RedditSubredditScraper:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Reddit Scraper")
-    parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API ('praw' or 'pushshift')")
+    parser = argparse.ArgumentParser(description="Subreddit Scraper")
     parser.add_argument("subreddits", nargs="+", help="List of subreddits")
-    parser.add_argument("--category", "-c", type=str, help="Category for the output directory")
-    parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve")
-    parser.add_argument("--before_days", "-b", type=str, default="0d", help="Type of posts to retrieve")
-    parser.add_argument("--post_limit", "-l", type=int, default=1000, help="Limit of posts to retrieve (1-1000)")
+    parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API selection (praw, pushshift, or pullpush)")
+    parser.add_argument("--category", "-c", type=str, help="Name of the output directory (e.g., DataScience)")
+    parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve, for use with Praw API")
+    parser.add_argument("--before_days", "-b", type=str, default="0d", help="Number of trailing days (e.g., 10d), for use with Pushshift/Pullpush API")
+    parser.add_argument("--post_limit", "-l", type=int, default=1000, help="Number of posts to retrieve (1-1000)")
     parser.add_argument("--sep", type=str, choices=["tab", "comma"], default="tab", help="Separator for the CSV output")
     parser.add_argument("--output_format", "-o", type=str, choices=["csv", "parquet", "json"], default="csv", help="Output format (csv, parquet, json)")
 
     args = parser.parse_args()
 
-    scraper = RedditSubredditScraper(args.subreddits, args.category, args.sep, args.output_format)
+    scraper = SubredditScraper(args.subreddits, args.category, args.sep, args.output_format)
     scraper.extract_subreddit_data(args.post_type, args.api, args.before_days, args.post_limit)
 
 if __name__ == "__main__":
