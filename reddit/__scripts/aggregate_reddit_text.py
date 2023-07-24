@@ -10,7 +10,7 @@ import argparse
 
 
 class RedditDataAggregator:
-    def __init__(self, df_filepath, text_column_list, category, subreddit_name, output_format):
+    def __init__(self, df_filepath, subreddit_name, category, text_column_list=['title', 'body', 'comments'], output_format='csv'):
         self.df_filepath = df_filepath
         self.text_column_list = text_column_list
         self.category = category
@@ -31,8 +31,8 @@ class RedditDataAggregator:
 
 
         dfs = glob.glob(f'{self.df_filepath}/*.csv')
-        agg_df = pd.concat([pd.read_csv(fp, header=0) for fp in dfs], ignore_index=True)
-        os.makedirs(f"../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_data", exist_ok=True)
+        agg_df = pd.concat([pd.read_csv(fp, header=0, encoding="utf-8", engine='python', sep=None) for fp in dfs], ignore_index=True)
+        os.makedirs(f"../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_agg_data", exist_ok=True)
         print(f'Saving aggregated DataFrame to: __aggregated_posts/{self.subreddit_name} ...')
 
         output_file_path = f'../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_agg_data/{self.subreddit_name}_agg_df_{self.snapshotdatetime}'
@@ -57,16 +57,15 @@ class RedditDataAggregator:
 def main():
     parser = argparse.ArgumentParser(description='Aggregate Reddit data from DataFrames.')
     parser.add_argument('df_filepath', type=str, help='Path to the input DataFrames.')
-    parser.add_argument('subreddit_name', type=str, help='Name of the subreddit.')
-    parser.add_argument('--category', type=str, help='Category name.')
-    parser.add_argument('--text_columns', nargs='+', default=['title', 'body', 'comments'], help='List of columns to aggregate. Default is ["title", "body", "comments"].')
-    parser.add_argument('--output_format', choices=['json', 'parquet', 'csv'], default='csv', help='Output file format. Choices: json, parquet, csv. Default is csv.')
+    parser.add_argument('--subreddit_name', '-s', type=str, help='Name of the subreddit.')
+    parser.add_argument('--category', '-c', type=str, help='Category name.')
+    parser.add_argument('--text_columns', '-t', type=str, nargs='+', default=['title', 'body', 'comments'], help='List of columns to aggregate. Default is ["title", "body", "comments"].')
+    parser.add_argument('--output_format', '-o', choices=['json', 'parquet', 'csv'], default='csv', help='Output file format. Choices: json, parquet, csv. Default is csv.')
     args = parser.parse_args()
 
-    aggregator = RedditDataAggregator(args.df_filepath, args.text_columns, args.category, args.subreddit_name, args.output_format)
+    aggregator = RedditDataAggregator(args.df_filepath, args.subreddit_name, args.category, args.text_columns, args.output_format)
     aggregator.aggregate_reddit_data()
 
 
 if __name__ == "__main__":
   main()
-
