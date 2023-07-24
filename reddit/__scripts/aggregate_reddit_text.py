@@ -35,7 +35,7 @@ class RedditDataAggregator:
         os.makedirs(f"../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_data", exist_ok=True)
         print(f'Saving aggregated DataFrame to: __aggregated_posts/{self.subreddit_name} ...')
 
-        output_file_path = f'../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_agg_data/{subreddit_name}_agg_df_{self.snapshotdatetime}'
+        output_file_path = f'../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_agg_data/{self.subreddit_name}_agg_df_{self.snapshotdatetime}'
         
         #Option to write aggregated dataset as JSON, PARQUET or CSV.
         if self.output_format == 'json':
@@ -51,7 +51,7 @@ class RedditDataAggregator:
         for column in self.text_column_list: 
             os.makedirs(f"../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_{column}_data", exist_ok=True)
             column_ls = agg_df[column].to_list()
-            with open(f'../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_{column}_data/{subreddit_name}_{column}_agg_{self.snapshotdatetime}.json', 'w') as f:
+            with open(f'../__data/__aggregated_posts/{self.category}/{self.subreddit_name}/raw/{self.snapshotdate}/{self.subreddit_name}_{column}_data/{self.subreddit_name}_{column}_agg_{self.snapshotdatetime}.json', 'w', encoding='utf-8') as f:
                 json.dump(column_ls, f, indent=2) 
 
 def main():
