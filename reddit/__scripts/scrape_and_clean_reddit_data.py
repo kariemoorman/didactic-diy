@@ -42,7 +42,7 @@ def scrape_and_clean_reddit_posts(subreddit_list, category, sep='tab', api='praw
     scraper = SubredditScraper(subreddit_list, category, sep, output_format='csv')
 
     if api in ['pushshift', 'pullpush']: 
-        scraper.extract_subreddit_data(api='pushshift', before_days=before_days, post_limit=post_limit)
+        scraper.extract_subreddit_data(api=api, before_days=before_days, post_limit=post_limit)
     elif api == 'praw': 
         scraper.extract_subreddit_data(api='praw', post_type=post_type, post_limit=post_limit)
     else: 
