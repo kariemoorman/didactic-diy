@@ -5,7 +5,7 @@
 
 from reddit_scraper.subreddit_lists import * 
 from reddit_nlp.reddit_text_preprocessor import preprocess_data
-from reddit_scraper.subreddit_scraper import pushshift_subreddit_activity, praw_subreddit_activity
+from reddit_scraper.subreddit_scraper import SubredditScraper
 
 
 def scrape_and_clean_reddit_posts(subreddit_list, category, sep='tab', api='praw', post_type='new', before_days='0d', post_limit=1000, amznsubdir_list=['Amazon','AmazonAlexa','AmazonPrimeAV','AmazonSmartHome'], method='token', singularize='yes', stopwords='yes', stopword_listtype='general'):
@@ -39,12 +39,14 @@ def scrape_and_clean_reddit_posts(subreddit_list, category, sep='tab', api='praw
     scrape_and_clean_reddit_posts(subreddit_gen_items, category='Technology',api='praw')
     
     '''
-    
-    if api == 'pushshift': 
-        pushshift_subreddit_activity(subreddit_list, category, before_days, post_limit, sep)
+    scraper = SubredditScraper(subreddit_list, category, sep, output_format='csv')
 
+    if api in ['pushshift', 'pullpush']: 
+        scraper.extract_subreddit_data(api='pushshift', before_days=before_days, post_limit=post_limit)
     elif api == 'praw': 
-        praw_subreddit_activity(subreddit_list, category, post_type, post_limit, sep)
+        scraper.extract_subreddit_data(api='praw', post_type=post_type, post_limit=post_limit)
+    else: 
+        print("Unsupported API specified.")
     
     for subreddit in subreddit_list: 
         data_filepath = f'../__data/__posts/{category}/{subreddit}'
