@@ -11,7 +11,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from credentials import my_client_id, my_client_secret, my_user_agent, my_password, my_username
+from credentials import *
 
 class SubredditUserActivityScraper:
     def __init__(self, subreddits, category):
@@ -19,7 +19,7 @@ class SubredditUserActivityScraper:
         self.category = category
 
         ## Establish Reddit Connection ##
-        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent, username=my_username, password=my_password)
+        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
 
         ## Datetime Snapshot ##
         self.snapshotdate = datetime.today().strftime('%d-%b-%Y')
@@ -36,7 +36,9 @@ class SubredditUserActivityScraper:
                 created_pst = datetime.fromtimestamp(post.created_utc).strftime('%d-%b-%Y %H:%M:%S')
                 commenters = []
                 submission = self.reddit.submission(id=post.id)
+                time.sleep(10)
                 submission.comments.replace_more(limit=None)
+                time.sleep(10)
                 for comment in submission.comments.list():
                     commenters.append(f'{comment.author}')
                 users.append([post.created_utc, created_pst, post.id, post.subreddit, post.url, post.author, commenters])
