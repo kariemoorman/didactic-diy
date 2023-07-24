@@ -105,7 +105,7 @@ class RedditSubredditSearchScraper:
                         comment_created_pst = [datetime.fromtimestamp(item).strftime('%d-%b-%Y %H:%M:%S') for item in subreddit_comments_df.created_utc]
                         subreddit_comments_df['created_pst'] = comment_created_pst
                     ## Concatenate DataFrames in a single DataFrame.
-                    subreddit_search_comments_df = pd.concat([subreddit_search_comments_df,subreddit_comments_df], ignore_index=True)                                 
+                    subreddit_search_comments_df = pd.concat([subreddit_search_comments_df,subreddit_comments_df], ignore_index=True)
             ## Write DataFrames to output directory based on output format.
             if self.output_format == 'parquet':
                 subreddit_search_comments_df.to_parquet(f'../__data/__posts/test/subreddits/{self.category}/{subreddit}/{subreddit}_subreddit_search_comments_{before_days}_{self.snapshotdatetime}.parquet', index=False)
