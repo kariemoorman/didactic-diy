@@ -10,7 +10,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from credentials import *
+from credentials import my_client_id, my_client_secret, my_user_agent, my_password, my_username
 
 class RedditSubredditSearchScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
@@ -20,7 +20,7 @@ class RedditSubredditSearchScraper:
         self.output_format = output_format
 
         ## Establish Reddit Connection ##
-        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
+        self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent, username=my_username, password=my_password)
 
         ## Datetime Snapshot ##
         self.snapshotdate = datetime.today().strftime('%d-%b-%Y')
