@@ -10,7 +10,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from reddit_scraper.credentials import *
+from credentials import *
 
 class RedditSubredditScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
@@ -68,7 +68,7 @@ class RedditSubredditScraper:
                 else: 
                     print('Unsupported file format specified.')
 
-    def _pushshift_subreddit_activity(self, before_days, post_limit):
+    def _pushshift_subreddit_activity(self, api, before_days, post_limit):
         if self.sep == 'tab':
             delimiter = '\t'
         elif self.sep == 'comma':
@@ -78,8 +78,8 @@ class RedditSubredditScraper:
             ## Print task initialization message.
             print(f'Gathering {post_limit} {before_days}-trailing posts for Subreddit: "{subreddit}"...')
             ## Load submissions and comments from {subreddit} using Pushshift API.
-            submissions = json.loads(requests.get(f'https://api.pushshift.io/reddit/search/submission?subreddit={subreddit}&before={before_days}&size={output_size}&sort=created_utc&metadata=false').text or '{}' or '' or '[]' or 'None' or None)
-            comments = json.loads(requests.get(f'https://api.pushshift.io/reddit/search/comment?subreddit={subreddit}&before={before_days}&size={output_size}&sort=created_utc&metadata=false').text or '{}' or '' or '[]' or 'None' or None)
+            submissions = json.loads(requests.get(f'https://api.{api}.io/reddit/search/submission?subreddit={subreddit}&before={before_days}&size={post_limit}&sort=created_utc&metadata=false', timeout=20).text or '{}' or '' or '[]' or 'None' or None)
+            comments = json.loads(requests.get(f'https://api.{api}.io/reddit/search/comment?subreddit={subreddit}&before={before_days}&size={post_limit}&sort=created_utc&metadata=false', timeout=20).text or '{}' or '' or '[]' or 'None' or None)
             ## Create output directory.
             os.makedirs(f"../__data/__posts/test/subreddits/{self.category}/{subreddit}", exist_ok=True)
             ## Transform data.json to pandas DataFrame.
@@ -108,8 +108,8 @@ class RedditSubredditScraper:
         print(api, self.category)
         if api == 'praw':
             self._praw_subreddit_activity(post_type, post_limit)
-        elif api == 'pushshift':
-            self._pushshift_subreddit_activity(before_days, post_limit)
+        elif api in ['pushshift', 'pullpush']:
+            self._pushshift_subreddit_activity(api, before_days, post_limit)
         else: 
             print("Unsupported API specified.")
         print("Task Complete!")
@@ -117,7 +117,7 @@ class RedditSubredditScraper:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Reddit Scraper")
-    parser.add_argument("--api", type=str, choices=["praw", "pushshift"], default="praw", help="API ('praw' or 'pushshift')")
+    parser.add_argument("--api", type=str, choices=["praw", "pushshift", "pullpush"], default="praw", help="API ('praw' or 'pushshift')")
     parser.add_argument("subreddits", nargs="+", help="List of subreddits")
     parser.add_argument("--category", "-c", type=str, help="Category for the output directory")
     parser.add_argument("--post_type", "-t", type=str, choices=["hot", "new", "top"], default="new", help="Type of posts to retrieve")
