@@ -16,10 +16,9 @@ snapshotdate = datetime.today().strftime('%d-%b-%Y_%H-%M-%S')
 
 
 class RedditUserActivityScraper: 
-    def __init__(self, post_type='new', post_limit=1000, output_format='csv'):
+    def __init__(self, post_type='new', post_limit=1000):
         self.post_type = post_type
         self.post_limit = post_limit
-        self.output_format = output_format
 
         ## Establish Reddit Connection ##
         self.reddit = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
