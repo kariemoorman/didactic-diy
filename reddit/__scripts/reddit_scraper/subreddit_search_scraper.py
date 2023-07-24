@@ -9,7 +9,7 @@ import requests
 import praw
 
 ## add credentials.py script to .gitignore list to keep personal keys safe. ##
-from reddit_scraper.credentials import *
+from credentials import *
 
 class SubredditSearchScraper:
     def __init__(self, subreddits, category, sep='tab', output_format='csv'):
