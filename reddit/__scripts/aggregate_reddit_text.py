@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 
 import os
+import sys
 from datetime import datetime, date
 import json
 import glob
 import argparse
 import pandas as pd
 import argparse
+import csv
+csv.field_size_limit(sys.maxsize)
 
 
 class RedditDataAggregator:
