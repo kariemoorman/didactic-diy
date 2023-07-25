@@ -45,27 +45,6 @@
 
 ## DQL 
 
-<h3 align='center'>Window Functions</h3>
-
----
-
-<div>
-<table>
-    <tr>
-    	<td style="margin:2px;">
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-aggregate_window.drawio.png' width='95%'/></p>
-        </td>
-	<td style="margin:2px;">
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-value_window.drawio.png' width='95%'/></p>
-        </td>
-	<td style="margin:2px;">
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-rank_window.drawio.png' width='95%'/></p>
-        </td>
-    </tr>
-</table>
-</div>
-
-
 <h3 align='center'>Table JOINs</h3>
 
 ---
@@ -108,6 +87,25 @@
 </table>
 </div>
 
+<h3 align='center'>Window Functions</h3>
+
+---
+
+<div>
+<table>
+    <tr>
+    	<td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-aggregate_window.drawio.png' width='95%'/></p>
+        </td>
+	<td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-value_window.drawio.png' width='95%'/></p>
+        </td>
+	<td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_window_functions-rank_window.drawio.png' width='95%'/></p>
+        </td>
+    </tr>
+</table>
+</div>
 
 ---
 
