@@ -5,8 +5,10 @@
 
 ## Table of Contents
 - <b>[SQL Data Structures](#overview-of-sql-data-structures)</b>
+- <b>[DDL](#ddl)</b>
+  - <b>[Database Definitions: Create, Alter, Rename, Drop](#database-definitions)</b>
 - <b>[DCL](#dcl)</b>
-  - <b>[Database Access Privileges](#database-access-privileges)</b>
+  - <b>[Database Access Privileges: Create, Grant, Show, Revoke](#database-access-privileges)</b>
 - <b>[DQL](#dql)</b>
   - <b>[Window Functions: Aggregate, Value, Ranking](#window-functions)</b>
   - <b>[Table JOINs: Left, Right, Inner, Outer, Special](#table-joins)</b>
@@ -20,6 +22,23 @@
     <tr>
     	<td style="margin:2px;">
 <p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_tables-sql_data_structures.drawio.png'  width='80%'/></p>
+        </td>
+    </tr>
+</table>
+</div>
+
+---
+
+## DDL 
+
+<h3 align='center'>Database Definitions</h3>
+
+---
+<div align='center'>
+<table>
+    <tr>
+    	<td style="margin:2px;">
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/sql/images/sql_ddl.drawio.png'  width='80%'/></p>
         </td>
     </tr>
 </table>
@@ -42,6 +61,7 @@
 </table>
 </div>
 
+---
 
 ## DQL 
 
