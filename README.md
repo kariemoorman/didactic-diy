@@ -25,6 +25,7 @@
 - <b>[TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)</b>
 - <b>[Tutorials](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials)</b>
   - Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
+  - Simulations: [wildfire-spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
     
 --- 
 
