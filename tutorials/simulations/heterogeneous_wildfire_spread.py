@@ -5,7 +5,7 @@ from matplotlib.colors import ListedColormap
 import argparse
 
 
-class WildfireModel:
+class HeterogeneousWildfireModel:
     def __init__(self, size, neighbors1=1, neighbors2=1, steps=20, p_tree1=0.6, p_tree2=0.2, p_burning=0.01):
         self.size = size
         self.neighbors1 = neighbors1
@@ -89,7 +89,7 @@ def main():
         print("Error: The sum of probabilities for tree and burning cells cannot exceed 1.")
         return
 
-    model = WildfireModel(args.size, args.neighbors1, args.neighbors2, args.steps, args.p_tree1, args.p_tree2,
+    model = HeterogeneousWildfireModel(args.size, args.neighbors1, args.neighbors2, args.steps, args.p_tree1, args.p_tree2,
                           args.p_burning)
     model.animate()
 
