@@ -66,10 +66,6 @@ class HomogeneousWildfireModel:
         ani = FuncAnimation(fig, self.plot, frames=self.steps + 1, interval=500, repeat=False)
         plt.show()
 
-    def wildfire(self):
-        pass
-
-
 def main():
     parser = argparse.ArgumentParser(description="Agent-based wildfire spread simulation.")
     parser.add_argument("--size", type=int, default=50, help="Size of the forest grid.")
