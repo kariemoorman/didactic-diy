@@ -102,3 +102,5 @@ The '__posts' subdirectory is a product of the webscraping task, while the '__ag
 
 
 ---
+
+<p align='center'><b>License: <a href='https://choosealicense.com/licenses/gpl-3.0/'>GNU General Public License v3.0</a></b></p>
