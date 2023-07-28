@@ -12,7 +12,7 @@ Parameters considered when constructing a data pipeline include the following:
 - <b>Data Storage Location</b>: <i>Where do I want my data to be stored: local/on-premises, cloud, or hybrid? </i>
 - <b>Data Throughput</b>: <i>How much data needs to be transmitted in each READ/WRITE request (i.e., do I need distributed/batch compute capabilities)? </i>
 - <b>Data Visualization</b>: <i>What types of analysis are meaningful for this dataset, what tools are best for visualizing those analyses, who do I want to have view access? </i>
-- <b>ETL vs. ETL</b>: <i>Which option is best for my use case? </i>
+- <b>ETL vs. ELT</b>: <i>Which option is best for my use case? </i>
 - <b>Automation</b>: <i>How can I automate all tasks within the workflow? </i>
 
 ---
