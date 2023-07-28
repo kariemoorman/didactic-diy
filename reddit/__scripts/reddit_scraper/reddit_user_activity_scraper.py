@@ -8,7 +8,7 @@ import pandas as pd
 import praw
 
 ## Add credentials.py script to .gitignore list to keep personal keys safe. ##
-from credentials import *
+from reddit_scraper.credentials import *
 
 
 ## Date and Datetime Snapshot ##
