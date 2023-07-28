@@ -37,7 +37,7 @@ python3 search_scrape_and_clean_data.py datascience MachineLearning -q GPT LLM -
 
 In the above example, subreddits 'MachineLearning' and 'datascience' are scraped using 'praw' *api*, returning a maximum of 100 'new' posts (submissions and associated comments) that contain either 'LLM' or 'GPT' search query terms. For each subreddit, the resultant dataset undergoes a text pre-processing step using 'token' method, and includes filtering of *stopwords* using the 'general' *stopword_listtype* and singularization as part of the NER step (specified via *singularize* input variable).
 
-For users who want to add a list of search query terms to their extract and transform process, [search_scrape_and_clean_reddit_posts.py](https://github.com/kariemoorman/didactic-diy/blob/main//reddit/__scripts/reddit_nlp/scrape_and_clean_reddit_data.py) script is for you.
+For users who want to add a list of search query terms to their extract and transform process, [search_scrape_and_clean_reddit_data.py](https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__scripts/search_scrape_and_clean_reddit_data.py) script is for you.
 
 ---
 ### Resultant File Structure 
