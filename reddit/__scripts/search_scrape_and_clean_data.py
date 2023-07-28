@@ -50,7 +50,7 @@ def main():
     parser.add_argument("--method", type=str, choices=["token", "lemma"], default="token", help="Text preprocessing method")
     parser.add_argument("--singularize", type=str, choices=["yes", "no"], default="yes", help="Singularize words during preprocessing")
     parser.add_argument("--stopwords", type=str, choices=["yes", "no"], default="yes", help="Apply stopwords during preprocessing")
-    parser.add_argument("--stopword_listtype", type=str, choices=["simple", "prep", "full"], default="general", help="Stopword list type during preprocessing")
+    parser.add_argument("--stopword_listtype", type=str, choices=["general", "prep", "full"], default="general", help="Stopword list type during preprocessing")
 
     args = parser.parse_args()
 
