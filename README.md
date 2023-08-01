@@ -24,7 +24,7 @@
 - <b>[Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit)</b>
 - <b>[TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)</b>
 - <b>[Tutorials](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials)</b>
-  - Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
+  - Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures)
   - Simulations: [wildfire spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
   - Recommendation: [movie recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb)
     
