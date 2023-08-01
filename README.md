@@ -27,6 +27,7 @@
   - Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures)
   - Simulations: [wildfire spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
   - Recommendation: [movie recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb)
+  - Path Traversal: [Dijkstra's Algorithm](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/dijkstras_algorithm_shortest_path.ipynb)
     
 --- 
 
