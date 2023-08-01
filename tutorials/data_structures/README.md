@@ -1,5 +1,5 @@
-<h2 align='center'>SQL</h2>
-<h4 align='center'>Data Structures: The building blocks of understanding.</h4>
+<h2 align='center'>Data Structures</h2>
+<h4 align='center'>The building blocks of understanding.</h4>
 
 ---
 
