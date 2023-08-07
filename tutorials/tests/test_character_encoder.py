@@ -7,6 +7,7 @@ from encoding_and_encryption.character_encoder import CharacterEncoder
 class TestCharacterEncoder(unittest.TestCase):
 
     def setUp(self):
+        #True Positive Test Cases
         self.encoder_string_binary = CharacterEncoder('Hello', 'string', 'binary') 
         self.encoder_string_ascii = CharacterEncoder('He ll0w', 'string', 'ascii') 
         self.encoder_ascii_binary = CharacterEncoder('72 101 108 108 111', 'ascii', 'binary')
