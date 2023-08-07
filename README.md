@@ -25,7 +25,7 @@
 - <b>[TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)</b>
 - <b>[Tutorials](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials)</b>
   - Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures), [character encoding (binary, ascii)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py), [unit tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)
-  - Cryptography: [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py)
+  - Cryptography: [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation (hash & salt)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py)
   - Simulations: [Wildfire Spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
   - Causal Modeling: [Inferring Workplace Performance from RTO Status](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/causal_modeling/causal_inference_modeling.ipynb)
   - Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb)
