@@ -50,7 +50,7 @@ class HashLib:
         return hash_list
 
 def main(): 
-    parser = argparse.ArgumentParser(description="String Hashing Algorithm", formatter_class=argparse.MetavarTypeHelpFormatter)
+    parser = argparse.ArgumentParser(description="String Hashing Algorithms", formatter_class=argparse.MetavarTypeHelpFormatter)
     parser.add_argument("input_string", type=str, help="Alphanumeric input string (e.g., 'i-h8t3_Mondayz*'; 'hello, World')")
     parser.add_argument("-a", "--algorithm", type=str, default="sha256", help='Select a hashing algorithm for encryption (options: "md5", "sha1", "sha256", "sha3", "sha3_256", "sha3_384", "sha3_512", "blake2", "blake2b", "blake2s")')
     parser.add_argument("-d", "--digest_size", type=int, default=32, help="Select length (int) of the output( e.g., 32 [32 bytes -> 256 bits; 64 (64 bytes -> 512 bits])")
