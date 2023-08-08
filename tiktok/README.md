@@ -17,6 +17,11 @@ TikTok.</h4>
   - [tiktok_downloader.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_downloader.py)  
     Choose either Selenium or Pyppeteer to dynamically download one or more Tiktok videos.  
       E.g., ```python3 tiktok_downloader.py <url> -b selenium -d firefox```
+
+- <b>TikTok Video Speech to Text Extractor</b>
+  - [tiktok_video_to_text.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
+    Specify mp4 filepath of Tiktok video downloaded using [tiktok_downloader.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_downloader.py), and output MP3 + WAV audio files and text transcription file.  
+      E.g., ```python3 tiktok_video_to_text.py <path/to/video_filename.mp4>```
     
 ---
 
