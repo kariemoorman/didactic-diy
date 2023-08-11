@@ -5,11 +5,14 @@ TikTok.</h4>
 ---
 
 ### Repository Contents
-- <b>Web Scraping</b>
+- <b>TikTok Video Scraping</b>
   - [tiktok_user_video_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_scraper/tiktok_user_video_scraper.py)  
     Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok usernames.  
       E.g., ```python3 tiktok_user_video_scraper.py blitzphd eczachly -b pyppeteer -o csv```
 
+  - [tiktok_tag_video_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_scraper/tiktok_tag_video_scraper.py)
+    Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok tags.
+    E.g., ```python3 tiktok_tag_video_scraper.py physics lhc -b pyppeteer -o csv```
     
 - <b>Sample Datasets</b>: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
 
