@@ -5,7 +5,7 @@ TikTok.</h4>
 ---
 
 ### Repository Contents
-- <b>TikTok Video Scraping</b>
+- <b>TikTok Video Scrapers</b>
   - [tiktok_user_video_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_scraper/tiktok_user_video_scraper.py)  
     Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok usernames.  
       E.g., ```python3 tiktok_user_video_scraper.py blitzphd eczachly -b pyppeteer -o csv```
@@ -13,8 +13,6 @@ TikTok.</h4>
   - [tiktok_tag_video_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_scraper/tiktok_tag_video_scraper.py)
     Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok tags.
     E.g., ```python3 tiktok_tag_video_scraper.py physics lhc -b pyppeteer -o csv```
-    
-- <b>Sample Datasets</b>: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
 
 - <b>TikTok Video Downloader</b>
   - [tiktok_downloader.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_downloader.py)  
@@ -25,7 +23,9 @@ TikTok.</h4>
   - [tiktok_video_to_text.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
     Specify mp4 filepath of Tiktok video downloaded using [tiktok_downloader.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_downloader.py), and output MP3 + WAV audio files and text transcription file.  
       E.g., ```python3 tiktok_video_to_text.py <path/to/video_filename.mp4>```
-    
+
+- <b>Sample Datasets</b>: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
+
 ---
 
 <p align='center'><b>License: <a href='https://choosealicense.com/licenses/gpl-3.0/'>GNU General 
