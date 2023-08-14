@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import base58
+import base64
 import numpy as np
 import argparse
 
@@ -16,6 +18,14 @@ class CharacterEncoder:
     def string_to_binary(self):
         binary_values = np.array([' '.join(format(ord(char), '08b') for char in self.input_value)])
         return binary_values
+    
+    def string_to_base64(self): 
+        base64_value = base64.b64encode(self.input_value.encode('utf-8'))
+        return base64_value.decode('utf-8')
+    
+    def string_to_base58(self): 
+        base58_value = base58.b58encode(self.input_value.encode('utf-8'))
+        return base58_value.decode('utf-8')
 
     def ascii_to_binary(self):
         input_values = [int(value) for value in self.input_value.split()]
@@ -31,7 +41,30 @@ class CharacterEncoder:
         input_values = [int(value) for value in self.input_value.split()]
         string = ''.join(chr(value) for value in input_values) 
         return string
-
+    
+    def base64_to_string(self):
+        string_value = base64.b64decode(self.input_value)
+        if self.output_format == 'binary':
+            binary_string = [' '.join(format(byte, '08b') for byte in string_value)]
+            return binary_string
+        elif self.output_format == 'string':
+            string = string_value.decode('utf-8')
+            return string
+        else: 
+            ascii_string = np.array([ord(char) for char in string_value.decode('utf-8')])
+            return ascii_string
+    
+    def base58_to_string(self):
+        string_value = base58.b58decode(self.input_value)
+        if self.output_format == 'binary':
+            binary_string = [' '.join(format(byte, '08b') for byte in string_value)]
+            return binary_string
+        elif self.output_format == 'string':
+            return string_value.decode('utf-8')
+        else: 
+            ascii_string = np.array([ord(char) for char in string_value.decode('utf-8')])
+            return ascii_string
+        
     def binary_to_ascii(self): 
         binary_segments = self.input_value.split()
         ascii_values = np.array([int(binary, 2) for binary in binary_segments])
@@ -43,22 +76,36 @@ class CharacterEncoder:
                 output = self.string_to_binary()
             elif self.output_format == 'ascii':
                 output = self.string_to_ascii()
+            elif self.output_format == 'base64': 
+                output = self.string_to_base64()
+            elif self.output_format == 'base58': 
+                output = self.string_to_base58()
             else: 
-                output = self.input_format
+                raise ValueError("Invalid output format specified.") 
         elif self.input_format == 'ascii': 
             if self.output_format == 'binary':
                 output = self.ascii_to_binary()
             elif self.output_format == 'string':
                 output = self.ascii_to_string()
             else: 
-                output = self.input_format
+                raise ValueError("Invalid output format specified.") 
         elif self.input_format == 'binary': 
             if self.output_format == 'ascii':
                 output = self.binary_to_ascii()
             elif self.output_format == 'string':
                 output = self.binary_to_string()
             else: 
-                output = self.input_format    
+                raise ValueError("Invalid output format specified.") 
+        elif self.input_format == 'base64': 
+            if self.output_format in ['string', 'ascii', 'binary']:
+                output = self.base64_to_string()  
+            else:  
+                raise ValueError("Invalid output format specified.")   
+        elif self.input_format == 'base58': 
+            if self.output_format in ['string', 'ascii', 'binary']:
+                output = self.base58_to_string()
+            else:  
+                raise ValueError("Invalid output format specified.") 
         else: 
             raise ValueError("Invalid input specified.")
         return output
@@ -78,4 +125,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
