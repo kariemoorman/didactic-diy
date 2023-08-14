@@ -116,11 +116,11 @@ class TikTokScraper:
 
     def _save_to_file(self, tag):
         if self.output_file_format == 'json':
-            self.tiktok_df.to_json(f"../__data/__tiktoks/{tag}/tiktok_data_{tag}_{self.snapshotdatetime}.json", orient='records')
+            self.tiktok_df.to_json(f"../__data/__tiktoks/{tag}/{self.snapshotdate}/{tag}__tiktok_videos_{self.snapshotdatetime}.json", orient='records')
         elif self.output_file_format == 'parquet':
-            self.tiktok_df.to_parquet(f"../__data/__tiktoks/{tag}/tiktok_data_{tag}_{self.snapshotdatetime}.parquet", index=False, compression='gzip')
+            self.tiktok_df.to_parquet(f"../__data/__tiktoks/{tag}/{self.snapshotdate}/{tag}__tiktok_videos_{self.snapshotdatetime}.parquet", index=False, compression='gzip')
         elif self.output_file_format == 'csv':
-            self.tiktok_df.to_csv(f"../__data/__tiktoks/{tag}/tiktok_data_{tag}_{self.snapshotdatetime}.csv", index=False, sep='\t', encoding='utf-8')
+            self.tiktok_df.to_csv(f"../__data/__tiktoks/{tag}/{self.snapshotdate}/{tag}__tiktok_videos_{self.snapshotdatetime}.csv", index=False, sep='\t', encoding='utf-8')
     
     async def scrape_tag_video(self, tag_list):
         if self.browser == 'selenium':
