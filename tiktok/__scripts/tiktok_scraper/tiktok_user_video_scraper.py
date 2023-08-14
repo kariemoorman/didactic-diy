@@ -77,7 +77,7 @@ class TikTokScraper:
         videos = driver.find_elements(By.XPATH, f"//a[contains(@href,'{url}')]")
         video_links = [i.get_attribute('href') for i in videos]
         
-        os.makedirs(f"../__data/__tiktoks/{username}/{self.snapshotdate}", exist_ok=True)
+        os.makedirs(f"../__data/__tiktoks/{username}", exist_ok=True)
         self.tiktok_df['username'] = [username for _ in range(len(video_links))]
         self.tiktok_df['user_bio'] = [bio for _ in range(len(video_links))]
         self.tiktok_df['video_link'] = video_links
