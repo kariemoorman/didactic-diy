@@ -2,13 +2,13 @@
 import os
 from datetime import datetime
 import argparse
-from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.backends import default_backend 
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 
 
-
 class AsymmetricEncryption: 
+    
     def __init__(self, input_phrase, action): 
         self.input_phrase = input_phrase.encode('utf-8')
         self.action = action
@@ -53,7 +53,7 @@ class AsymmetricEncryption:
 
     def encrypt_message(self, public_key): 
         # Encrypt the message using the public key
-        ciphertext = public_key.encrypt(
+        encrypted_text = public_key.encrypt(
             self.input_phrase,
             padding.OAEP(
                 mgf=padding.MGF1(algorithm=hashes.SHA256()),
@@ -61,14 +61,14 @@ class AsymmetricEncryption:
                 label=None
                 )
             )
-        return ciphertext
+        return encrypted_text
 
     def decrypt_message(self, private_key):
         # Update encoding
-        ciphertext = self.input_phrase.decode('unicode-escape').encode('ISO-8859-1')
+        encrypted_text = self.input_phrase.decode('unicode-escape').encode('ISO-8859-1')
         # Decrypt the ciphertext using private key
         decrypted_message = private_key.decrypt(
-            ciphertext,
+            encrypted_text,
             padding.OAEP(
                 mgf=padding.MGF1(algorithm=hashes.SHA256()),
                 algorithm=hashes.SHA256(),
