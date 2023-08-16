@@ -3,6 +3,8 @@
 import re
 import csv
 import json
+import time
+import tqdm
 import subprocess
 import argparse
 from pydub import AudioSegment
@@ -21,7 +23,7 @@ class SpeechConverter:
         # Execute ffmpeg to transform mp4 to mp3
         try:
             subprocess.run(ffmpeg_command, check=True)
-            print("MP3 Conversion successful.\n")
+            print("\nMP3 Conversion successful.\n")
             return mp3_file
         except subprocess.CalledProcessError as e:
             print("Error during conversion:", e)
@@ -43,20 +45,31 @@ class SpeechConverter:
     def convert_speech_to_text(self, audio_file):
         # Initialize the recognizer
         recognizer = sr.Recognizer()
+        
+        # Calculate the audio file duration for progress tracking
+        with sr.AudioFile(audio_file) as source:
+            audio_duration = source.DURATION
+         # Initialize tqdm to track progress
+        progress_bar = tqdm(total=100, desc="Converting speech to text", unit="%", dynamic_ncols=True)
         # Use the recognizer to recognize speech
         with sr.AudioFile(audio_file) as source:
-            audio_data = recognizer.record(source)
+            audio_data = recognizer.record(source, duration=audio_duration)
+       
             try:
                 # Perform speech recognition
-                text = recognizer.recognize_google(audio_data)
+                text = recognizer.recognize_google(audio_data, show_all=True)
+                progress_bar.update(100)
                 print("Text extraction successful.\n")
                 return text
             except sr.UnknownValueError:
                 print("Speech recognition could not understand the audio.")
+                progress_bar.close()
                 return None
             except sr.RequestError as e:
                 print("Could not request results from Google Web Speech API; {0}".format(e))
-                return None
+                time.sleep(1)
+                progress_bar.close()
+                return recognizer.recognize_google(audio_data, show_all=True)
 
     def save_as_json(self, text, output_file):
         with open(output_file, 'w') as json_file:
