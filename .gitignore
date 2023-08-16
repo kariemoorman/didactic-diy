@@ -25,6 +25,7 @@ wheels/
 
 # Secrets
 credentials.py
+credentials/
 
 # Logs 
 geckodriver.log
