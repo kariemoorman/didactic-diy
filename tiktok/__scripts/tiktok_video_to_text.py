@@ -50,8 +50,8 @@ class SpeechConverter:
             # Calculate the audio file duration for progress tracking
             audio_duration = source.DURATION
             audio_data = recognizer.record(source, duration=audio_duration)
-        # Initialize tqdm to track progress
-        progress_bar = tqdm(total=100, desc="Converting speech to text", unit="%", dynamic_ncols=True)
+            # Initialize tqdm to track progress
+            progress_bar = tqdm(total=100, desc="Converting speech to text", unit="%", dynamic_ncols=True)
             try:
                 # Perform speech recognition
                 text = recognizer.recognize_google(audio_data)
