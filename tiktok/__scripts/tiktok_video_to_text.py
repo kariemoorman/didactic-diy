@@ -45,20 +45,17 @@ class SpeechConverter:
     def convert_speech_to_text(self, audio_file):
         # Initialize the recognizer
         recognizer = sr.Recognizer()
-        
-        # Calculate the audio file duration for progress tracking
-        with sr.AudioFile(audio_file) as source:
-            audio_duration = source.DURATION
-         # Initialize tqdm to track progress
-        progress_bar = tqdm(total=100, desc="Converting speech to text", unit="%", dynamic_ncols=True)
         # Use the recognizer to recognize speech
         with sr.AudioFile(audio_file) as source:
+            # Calculate the audio file duration for progress tracking
+            audio_duration = source.DURATION
             audio_data = recognizer.record(source, duration=audio_duration)
-       
+        # Initialize tqdm to track progress
+        progress_bar = tqdm(total=100, desc="Converting speech to text", unit="%", dynamic_ncols=True)
             try:
                 # Perform speech recognition
-                text = recognizer.recognize_google(audio_data, show_all=True)
-                progress_bar.update(100)
+                text = recognizer.recognize_google(audio_data)
+                progress_bar.update(audio_duration)
                 print("Text extraction successful.\n")
                 return text
             except sr.UnknownValueError:
@@ -67,9 +64,10 @@ class SpeechConverter:
                 return None
             except sr.RequestError as e:
                 print("Could not request results from Google Web Speech API; {0}".format(e))
-                time.sleep(1)
+                #time.sleep(1)
                 progress_bar.close()
-                return recognizer.recognize_google(audio_data, show_all=True)
+                #return recognizer.recognize_google(audio_data)
+                return None
 
     def save_as_json(self, text, output_file):
         with open(output_file, 'w') as json_file:
