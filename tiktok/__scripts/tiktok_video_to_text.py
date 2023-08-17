@@ -4,7 +4,7 @@ import re
 import csv
 import json
 import time
-import tqdm
+from tqdm import tqdm
 import subprocess
 import argparse
 from pydub import AudioSegment
