@@ -14,6 +14,7 @@ class AsymmetricEncryption:
         self.action = action
         self.snapshotdate = datetime.today().strftime('%d-%m-%Y')
         self.snapshotdatetime = datetime.today().strftime('%d-%m-%Y_%H-%M-%S')
+        os.makedirs(f"./credentials", exist_ok=True)
         self.private_key_filepath = f'credentials/private_key_{self.snapshotdate}.pem'
 
     def generate_keypair(self):
