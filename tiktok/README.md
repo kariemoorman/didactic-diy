@@ -20,9 +20,9 @@ TikTok.</h4>
       E.g., ```python3 tiktok_downloader.py <url> -b selenium -d firefox```
 
 - <b>TikTok Video Speech to Text Extractor</b>
-  - [tiktok_video_to_text.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
-    Specify mp4 filepath of Tiktok video downloaded using [tiktok_downloader.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_downloader.py), and output MP3 + WAV audio files and text transcription file.  
-      E.g., ```python3 tiktok_video_to_text.py <path/to/video_filename.mp4>```
+  - [tiktok_video_to_text.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)  
+    Choose either Google or OpenAI ASR model to transcribe Tiktok video (in mp4 format).  
+      E.g., ```python3 tiktok_video_to_text.py <path/to/video_filename.mp4> -m openai```
 
 - <b>Sample Datasets</b>: [__data](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok/__data)
 
