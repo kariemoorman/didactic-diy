@@ -32,10 +32,12 @@ en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_
 en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl#sha256=f9a1f0ae83954c49ebf92c0f7043ea02de51db59bf6cd3ed849d46928612c806
 exceptiongroup==1.1.2
 executing==1.2.0
+ffmpeg-python==0.2.0
 filelock==3.12.2
 Flask==2.2.5
 fonttools==4.41.0
 fsspec==2023.6.0
+future==0.18.3
 h11==0.14.0
 hdbscan==0.8.33
 huggingface-hub==0.16.4
@@ -56,6 +58,7 @@ llvmlite==0.40.1
 MarkupSafe==2.1.3
 matplotlib==3.7.2
 matplotlib-inline==0.1.6
+more-itertools==10.1.0
 mpmath==1.3.0
 murmurhash==1.0.9
 mysql-connector-python==8.1.0
@@ -64,6 +67,7 @@ networkx==3.1
 nltk==3.8.1
 numba==0.57.1
 numpy==1.24.4
+openai-whisper==20230314
 outcome==1.2.0
 packaging==23.1
 pandas==2.0.3
@@ -277,6 +281,7 @@ sympy==1.12
 tenacity==8.2.2
 thinc==8.1.10
 threadpoolctl==3.2.0
+tiktoken==0.3.1
 tokenizers==0.13.3
 torch==2.0.1
 torchvision==0.15.2
