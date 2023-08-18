@@ -13,6 +13,7 @@ class SymmetricEncryption:
         self.action = action
         self.snapshotdate = datetime.today().strftime('%d-%m-%Y')
         self.snapshotdatetime = datetime.today().strftime('%d-%m-%Y_%H-%M-%S')
+        os.makedirs(f"./credentials", exist_ok=True)
         self.key_filepath = f'credentials/fernet_key_{self.snapshotdate}.key'
 
     def generate_key(self):
