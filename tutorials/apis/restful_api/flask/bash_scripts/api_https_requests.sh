@@ -2,6 +2,7 @@
 
 # brew install jq
 
+# Credentials 
 API_URL="https://127.0.0.1:5000/tasks"
 API_KEY="your_api_key"
 CREDENTIALS="./credentials/cert.pem"

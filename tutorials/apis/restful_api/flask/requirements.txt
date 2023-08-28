@@ -34,6 +34,7 @@ PyJWT==2.8.0
 pyOpenSSL==23.2.0
 pyRFC3339==1.1
 pytz==2023.3
+redis==5.0.0
 requests==2.31.0
 rich==13.5.2
 six==1.16.0
