@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask App</title>
+    <style>
+        body {
+            background-color: #283593; /* Dark indigo background color */
+            color: white; /* White font color */
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black; /* Add border to table cells */
+        }
+        table {
+            border-collapse: collapse; /* Collapse table borders */
+            width: 100%; /* Adjust table width as needed */
+            // margin: auto; /* Center the table on the page */
+            margin-left: 5px; /* Left-align the table on the page */
+        }
+    </style>
+</head>
+<body>
+    <h1>An Example Flask REST API</h1>
+    <p>Add, Modify, and Delete Tasks using POST, PUT, and DELETE HTTP requests.</p>
+
+
+    <h3 style='margin-left: 5px; padding-top: 20px;'>Task List</h3>
+    <p style='margin-left: 5px;'>(Powered by Jinja)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Task</th>
+                <th>Completion Status</th>
+                <th>Creation DateTime (GMT)</th>
+                <th>Updated DateTime (GMT)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task['id'] }}</td>
+                    <td>{{ task['title'] }}</td>
+                    <td>{{ task['done'] }}</td>
+                    <td>{{ task['datetime'] }}</td>
+                    <td>{{ task['update_datetime'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
