@@ -1,0 +1,262 @@
+2023-08-23 01:06:28,838 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 01:07:19,530 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy ice cream'}
+2023-08-23 01:07:19,530 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy ice cream', 'done': False}"}
+2023-08-23 01:07:26,230 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 01:07:26,230 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 01:07:33,477 - INFO - {'event': 'update_task', 'message': 'Updating Task: 1'}
+2023-08-23 01:07:33,477 - INFO - {'event': 'update_task', 'message': 'Task 1', 'old_task': {'id': 1, 'title': 'Buy ice cream', 'done': False}}
+2023-08-23 01:07:33,477 - INFO - {'event': 'update_task', 'message': "Task 1 updated successfully: {'id': 1, 'title': 'Buy fruit', 'done': True}"}
+2023-08-23 01:07:40,701 - INFO - {'event': 'update_task_patch', 'message': 'Updating task (PATCH): 2'}
+2023-08-23 01:07:40,701 - INFO - {'event': 'update_task_patch', 'message': 'Task 2', 'old_task': {'id': 2, 'title': 'Buy chips', 'done': False}}
+2023-08-23 01:07:40,701 - INFO - {'event': 'update_task_patch', 'message': "Task 2 updated successfully: {'id': 2, 'title': 'Buy chips', 'done': True}"}
+2023-08-23 01:07:49,049 - INFO - {'event': 'get_tasks', 'message': 'Accessing /tasks route - Method: GET'}
+2023-08-23 01:07:56,398 - INFO - {'event': 'delete_task', 'message': 'Deleting Task: 1'}
+2023-08-23 01:07:56,399 - INFO - {'event': 'delete_task', 'message': 'Task 1 deleted successfully', 'old_tasks': [{'id': 1, 'title': 'Buy fruit', 'done': True}, {'id': 2, 'title': 'Buy chips', 'done': True}], 'remaining_tasks': [{'id': 2, 'title': 'Buy chips', 'done': True}]}
+2023-08-23 16:53:12,326 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:53:12,501 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:54:00,805 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:54:00,979 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:54:10,293 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:10,294 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:10,584 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:10,584 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:10,907 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:10,907 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:11,102 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:11,102 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:11,272 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:11,273 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:11,421 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:11,421 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 6, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:11,596 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:11,596 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 7, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:11,741 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:11,742 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 8, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:11,912 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:11,912 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 9, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:12,073 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:12,073 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 10, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:12,407 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:12,408 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 11, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:54:12,724 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:54:12,724 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 12, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:16,464 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:56:19,803 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:56:25,395 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:25,395 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:25,688 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:25,688 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:25,877 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:25,877 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:26,034 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:26,034 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:26,391 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:26,391 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:26,740 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:26,740 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 6, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:27,359 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:27,359 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 7, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:56:28,739 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:56:28,739 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 8, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:57:25,592 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 16:57:29,011 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:57:29,011 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:57:29,322 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:57:29,322 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:57:29,780 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:57:29,780 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 16:57:30,903 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 16:57:30,903 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:01:04,092 - WARNING - Rate limit exceeded: <function create_task at 0x1047300d0>
+2023-08-23 17:01:30,713 - WARNING - Rate limit exceeded: <function create_task at 0x10609c0d0>
+2023-08-23 17:01:40,763 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:01:40,939 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:01:47,589 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:01:47,589 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:01:48,184 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:01:48,184 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:01:49,065 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:01:49,065 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:01:49,662 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:01:49,662 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:01:50,318 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:01:50,318 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:01:51,591 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:01:51,591 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 6, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:06:12,136 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:07:55,756 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:07:55,921 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:08:00,583 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:00,583 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:01,175 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:01,175 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:01,567 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:01,568 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:02,057 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:02,058 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:02,452 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:02,452 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:02,810 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:02,811 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 6, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:03,236 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:03,237 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 7, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:03,762 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:03,762 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 8, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:04,234 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:04,234 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 9, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:08:04,738 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:08:04,738 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 10, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:09,410 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:10:16,443 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:16,444 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:16,725 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:16,725 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:16,956 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:16,956 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:17,167 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:17,167 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:17,354 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:17,354 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:17,555 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:17,555 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 6, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:17,709 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:17,709 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 7, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:17,905 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:17,905 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 8, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:18,063 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:18,063 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 9, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:18,240 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:18,240 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 10, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:18,581 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:18,582 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 11, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:10:18,754 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:10:18,754 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 12, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:25,546 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:11:30,025 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:30,025 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:30,794 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:30,794 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:31,256 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:31,257 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:31,766 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:31,766 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:32,352 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:32,352 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:46,717 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:11:46,881 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:11:50,258 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:50,258 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:51,031 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:51,031 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:51,670 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:51,670 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:52,488 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:52,488 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:11:53,392 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:11:53,392 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:14:06,015 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:14:40,701 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:16:21,067 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:17:11,220 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 17:39:55,327 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:55,328 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:55,328 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:39:55,328 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:39:55,809 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:55,810 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:55,810 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:39:55,810 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:39:56,737 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:56,738 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:56,738 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:39:56,738 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:39:57,605 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:57,606 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:57,606 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:39:57,606 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 17:39:58,069 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:58,069 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 17:39:58,069 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 17:39:58,069 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 5, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 18:45:56,873 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 18:46:03,498 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 18:46:03,498 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 18:46:17,757 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 18:49:34,722 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 18:49:34,722 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 20:03:00,229 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 20:03:03,623 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:03,623 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:03,624 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 20:03:03,624 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 20:03:04,687 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:04,688 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:04,688 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 20:03:04,688 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 20:03:06,261 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:06,262 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:06,262 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 20:03:06,262 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 20:03:07,398 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:07,398 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 20:03:07,398 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 20:03:07,398 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 21:17:19,444 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 21:18:02,602 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:23:20,210 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 21:26:11,370 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 21:27:55,394 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:27:55,394 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:27:55,395 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 21:27:55,396 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 1, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 21:28:31,399 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:28:31,400 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:28:31,401 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 21:28:31,402 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 2, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 21:30:11,474 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:30:11,474 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:30:11,475 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 21:30:11,476 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 3, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 21:31:44,888 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:31:44,889 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 21:31:44,890 - INFO - {'event': 'create_task', 'message': 'Creating task: Buy chips'}
+2023-08-23 21:31:44,891 - INFO - {'event': 'create_task', 'message': "Task created successfully: {'id': 4, 'title': 'Buy chips', 'done': False}"}
+2023-08-23 22:10:40,701 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:15:48,464 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:25:09,793 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:25:21,453 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:25:34,092 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:26:18,553 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:26:43,375 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:26:52,009 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:27:14,078 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:27:29,300 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:28:47,608 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:28:56,968 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:29:01,768 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:29:30,275 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-23 22:29:30,276 - INFO - {'event': 'get_tasks', 'message': 'Accessing /tasks route - Method: GET'}
+2023-08-23 22:49:00,383 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:49:12,064 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:49:21,210 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:49:27,547 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-23 22:49:35,204 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:08:04,015 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:08:04,336 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:08:13,013 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:08:43,344 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:08:46,007 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:08:48,103 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:09:31,035 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:09:31,353 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:09:41,480 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:09:46,492 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:09:48,265 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:11:02,331 - INFO - {'event': 'app_start', 'message': 'Flask app started'}
+2023-08-27 21:11:06,821 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:11:06,822 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:11:06,822 - INFO - {'event': 'get_tasks', 'message': 'Accessing /tasks route - Method: GET'}
+2023-08-27 21:11:09,174 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:12:03,980 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:12:03,981 - WARNING - Rate limit exceeded: 127.0.0.1
+2023-08-27 21:12:03,981 - INFO - {'event': 'get_tasks', 'message': 'Accessing /tasks route - Method: GET'}
