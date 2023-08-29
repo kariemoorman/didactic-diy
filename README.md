@@ -2,8 +2,8 @@
 <h4 align='center'>Data Engineering, Science & Analytics, for practice and utility.</h4>
 
 ---
-### [Tutorials](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials)</b>
-- Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures), [character encoding (binary, ascii, base64)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py), [unit tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)
+### Tutorials
+- Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures), [character encoding (binary, ascii, base64)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py)
 - Webscraping: [Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper), [Tiktok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)
 - Audio Transcription: [Tiktok](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
 - Simulations: [Wildfire Spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
@@ -13,6 +13,7 @@
 - Anomaly Detection: [Isolation Forest](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb)
 - Cryptography: [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation (hash & salt)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py), [Symmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py), [Asymmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/asymmetric_encryption.py)
 - APIs: [RESTful API in Flask](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask)
+- Testing: [unit tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)
     
 --- 
 ### Projects
