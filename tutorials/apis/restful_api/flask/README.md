@@ -83,7 +83,7 @@ curl -X POST \
 
 <img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/apis/restful_api/flask/images/bash_flask_api_http_post.png' alt='HTTP POST request'/>
 
-PUT changes to the first to update both the task title and completion status: 
+PUT changes to the first to update both title and completion status of the first task: 
 ```bash
 curl -X PUT \ 
   -H "Content-Type: application/json" \
@@ -93,7 +93,7 @@ curl -X PUT \
 
 <img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/apis/restful_api/flask/images/bash_flask_api_http_put.png' alt='HTTP PUT request'/>
 
-PATCH the second task to update the completion status:
+PATCH the second task to update completion status of the second task:
 ```bash
 curl -X PATCH \
   -H "Content-Type: application/json" \
