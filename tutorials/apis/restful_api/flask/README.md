@@ -17,7 +17,7 @@
 
 A REST API (Representational State Transfer Application Programming Interface) is a widely used client-server architectural style for designing web-based networked applications. REST APIs provide a standardized and flexible way for different systems to communicate and interact with relatively low-complexity, and are most commonly used in web applications, mobile apps, and IoT devices.
 
-The core concept of REST is transferring the state of a resource from server to client or vice versa. To do this, REST APIs utilize a uniform set of rules (e.g., HTTP methods) and conventions (e.g., security protocols) that allow different software applications to communicate with each other over the internet. In each "communication" step, REST APIs map CRUD (Create, Read, Update, Delete) operations to HTTP methods (`POST`, `GET`, `PUT/PATCH`, `DELETE`) to transfer representations of resources between client and server, often in JSON or XML format. Each resource is accessed via a specific URL endpoint (e.g., `/tasks` may represent a collection of task data). Each request is coupled with an HTTP response code to indicate the outcome of that request (e.g., 200 OK, 404 Not Found, 500 Internal Server Error), which aids in error handling scenarios and helps ensure an overall successful interaction between the client and the server. 
+The core concept of REST is transferring the state of a resource from server to client or vice versa. To do this, REST APIs utilize a uniform set of rules (e.g., HTTP methods) and conventions (e.g., security protocols) that allow different software applications to communicate with each other over the internet. In each "communication" step, REST APIs map CRUD (Create, Read, Update, Delete) operations to HTTP methods (`POST`, `GET`, `PUT/PATCH`, `DELETE`) to transfer representations of resources between client and server, often in JSON or XML format. Each resource is accessed via a specific URL endpoint (e.g., `/tasks` may represent a collection of task data). Each request is coupled with an HTTP response code to indicate the outcome of that request (e.g., `200` OK, `404` Not Found, `500` Internal Server Error), which aids in error handling scenarios and helps ensure an overall successful interaction between the client and the server. 
 
 REST APIs play a pivotal role in enabling seamless integration and interoperability between diverse software systems while maintaining simplicity and consistency in communication.
 
@@ -33,6 +33,8 @@ For a more detailed overview of API protocols and HTTP requests, see my blog pos
   JSON Web Token (JWT) creation logic.
 - <b>Jinja Templates</b>: [templates](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask/templates)  
   Presentation layer that dynamically generates HTML pages by rendering data obtained via the API.
+- <b>Bash Scripts</b>: [bash_scripts](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask/bash_scripts)  
+  Example bash scripts to execute API calls on HTTP and HTTPS endpoints.
 - <b>Activity Logs</b>: [logs](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask/logs)  
   Example API activity logs.
 - <b>Requirements</b>: [requirements.txt](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/apis/restful_api/flask/requirements.txt)  
