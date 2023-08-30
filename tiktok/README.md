@@ -11,7 +11,7 @@ TikTok.</h4>
       E.g., ```python3 tiktok_user_video_scraper.py blitzphd eczachly -b pyppeteer -o csv```
 
   - [tiktok_tag_video_scraper.py](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_scraper/tiktok_tag_video_scraper.py)
-    Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok tags.
+    Choose either Selenium or Pyppeteer to dynamically scrape TikTok videos for one or more Tiktok tags.  
     E.g., ```python3 tiktok_tag_video_scraper.py physics lhc -b pyppeteer -o csv```
 
 - <b>TikTok Video Downloader</b>
