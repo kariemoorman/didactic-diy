@@ -9,7 +9,7 @@
 - Audio Transcription: [Tiktok](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
 - Simulations: [Wildfire Spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
 - Causal Modeling: [Inferring Workplace Performance from RTO Status](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/causal_modeling/causal_inference_modeling.ipynb)
-- Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb)
+- Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb), [Contextual Bandits](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb)
 - Sorting Algorithms: [N-Best: Min-Heap](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/sorting_algorithms/n_best.ipynb)
 - Path Traversal: [Dijkstra's Algorithm](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/dijkstras_algorithm_shortest_path.ipynb)
 - Anomaly Detection: [Isolation Forest](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb)
