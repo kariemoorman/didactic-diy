@@ -20,7 +20,6 @@
 --- 
 ### Projects
 
-- <b>[Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit)</b>
 - <b>[TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)</b>
 
 ---
