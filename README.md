@@ -39,7 +39,7 @@
 - <b>Data Structures & Processing</b>
   - Python: [pandas](https://pypi.org/project/pandas/), [numpy](https://pypi.org/project/numpy/), [pyarrow](https://pypi.org/project/pyarrow/), [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [regex](https://pypi.org/project/regex/)
 - <b>Modeling (e.g., Statistical, ML)</b>
-  - Python: [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [scikit-learn](https://pypi.org/project/scikit-learn/), [bertopic](https://pypi.org/project/bertopic/), [pytorch](https://pypi.org/project/torch/)
+  - Python: [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [scikit-learn](https://pypi.org/project/scikit-learn/), [bertopic](https://pypi.org/project/bertopic/), [pytorch](https://pypi.org/project/torch/), [transformers](https://pypi.org/project/transformers/)
 - <b>Visualization</b>
   - Python: [matplotlib](https://pypi.org/project/matplotlib/), [seaborn](https://pypi.org/project/seaborn/), [plotly](https://pypi.org/project/plotly/), [dash](https://pypi.org/project/dash/)
 
