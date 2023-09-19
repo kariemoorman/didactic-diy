@@ -9,7 +9,7 @@
 - Audio Transcription: [Tiktok](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
 - OCR: [OCR using Tesseract](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/ocr/ocr_tesseract.ipynb)
 - Clustering: [Vector Search using NearestNeighbors](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/clustering/Vector_Search.ipynb)
-- Classification: [Logistic Regression](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
+- Classification: [Logistic Regression (Binomial & Multinomial)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
 - Causal Modeling: [Inferring Workplace Performance from RTO Status](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/causal_modeling/causal_inference_modeling.ipynb)
 - Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb), [Contextual Bandits](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb)
 - Sorting Algorithms: [N-Best Using Min-Heap](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/sorting_algorithms/n_best.ipynb)
