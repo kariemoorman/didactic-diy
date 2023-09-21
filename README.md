@@ -20,6 +20,8 @@
 - APIs: [RESTful API in Flask](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask)
 - Testing: [Unit Tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)
 - GEOINT: [Earthquake Analysis in R](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/r/geospatial_analysis-earthquakes.md)
+- NLP:
+  - Sentiment Analysis: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py)
     
 --- 
 ### Projects
