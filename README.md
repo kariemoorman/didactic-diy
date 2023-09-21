@@ -19,7 +19,7 @@
 - Cryptography: [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation (hash & salt)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py), [Symmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py), [Asymmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/asymmetric_encryption.py)
 - APIs: [RESTful API in Flask](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask)
 - Testing: [Unit Tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)
-- GEOINT: [Earthquake Analysis in R](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/r/geospatial_analysis-earthquakes.md)
+- GEOINT: [Earthquake Analysis in R](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/r/geospatial_analysis-earthquakes.md)
     
 --- 
 ### Projects
