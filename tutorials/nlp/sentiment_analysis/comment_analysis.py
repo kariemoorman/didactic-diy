@@ -73,7 +73,6 @@ class CommentAnalyzer:
             print(f"Has Emotion: {has_emotion}")
             print(f"Is Derogatory: {is_derogatory}")
             print(f"Derogatory Score: {derogatory_score:.2f}")
-            print("Spacy Analysis:")
             for key, value in spacy_analysis.items():
                 print(f"{key}: {value}")
             print("-" * 30)
@@ -114,7 +113,6 @@ if __name__ == "__main__":
 # Has Emotion: True
 # Is Derogatory: True
 # Derogatory Score: 0.36
-# Spacy Analysis:
 # Polarity: -0.8
 # Subjectivity: 0.9
 # Emotion_words: [(['hate'], -0.8, 0.9, None)]
@@ -125,7 +123,6 @@ if __name__ == "__main__":
 # Has Emotion: False
 # Is Derogatory: True
 # Derogatory Score: 0.05
-# Spacy Analysis:
 # Polarity: -0.1875
 # Subjectivity: 0.5
 # Emotion_words: [(['such'], 0.0, 0.5, None), (['dumb'], -0.375, 0.5, None)]
