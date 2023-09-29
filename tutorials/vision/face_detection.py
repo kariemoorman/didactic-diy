@@ -1,4 +1,6 @@
 import cv2
+import os
+import uuid
 
 ## Download haarcascade_frontalface_default.xml using the following link, and place it in the : 
 #    -  https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_frontalface_default.xml
@@ -9,7 +11,9 @@ import cv2
 classifier = './haarcascade_frontalface_default.xml'
 face_cascade = cv2.CascadeClassifier(classifier)
 
-def face_detection(video_filepath): 
+def face_detection(video_filepath, output_directory): 
+    os.makedirs(output_directory, exist_ok=True)
+    
     cap = cv2.VideoCapture(video_filepath)
 
     frame_width = int(cap.get(3))
@@ -45,6 +49,11 @@ def face_detection(video_filepath):
                 (0, 255, 0), 
                 3
             )
+
+            face_image = frame[y:y + h, x:x + w]
+            unique_filename = os.path.join(output_directory, f"face_{str(uuid.uuid4())}.png")
+            cv2.imwrite(unique_filename, face_image)
+        
         out.write(frame)
         
         cv2.imshow(
@@ -57,6 +66,5 @@ def face_detection(video_filepath):
         
     cap.release()
     out.release()    
-
     cv2.destroyAllWindows()
     
