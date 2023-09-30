@@ -6,7 +6,7 @@ cffi==1.15.1
 charset-normalizer==3.2.0
 click==8.1.7
 ConfigArgParse==1.7
-configobj==5.0.8
+configobj>=5.0.9
 cryptography>=41.0.4
 Deprecated==1.2.14
 distro==1.8.0
