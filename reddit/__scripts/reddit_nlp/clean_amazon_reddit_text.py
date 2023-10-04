@@ -67,14 +67,12 @@ def remove_amazon_numbers(text):
     text = [re.sub(r'\b([0-9]\.)([0-9]x[0-9]+\"?)?', '', sentence) for sentence in text]
     text = [re.sub(r'\s([0-9]+.?[0-9]+)([a-z]+)\b', '', sentence) for sentence in text]
     text = [re.sub(r'\b([A-Za-z]+?[0-9]+[A-Za-z]+[0-9]+[A-Za-z]+)\b', '', sentence) for sentence in text]
-    text = [re.sub(r'\b([A-Za-z]+)?([0-9]+)([A-Za-z]+)?\b', '', sentence) for sentence in text] #n32w
-    #text = [re.sub(r'\b([A-Za-z]+[0-9]+)([A-Za-z]+)? \b', '', sentence) for sentence in text] #new
+    text = [re.sub(r'\b([A-Za-z]+)?([0-9]+)([A-Za-z]+)?\b', '', sentence) for sentence in text] 
     text = [re.sub(r'([A-Za-z]+[0-9]+)\b', '', sentence) for sentence in text]
     text = [re.sub(r'([A-Z]+[0-9])\w+', '', sentence) for sentence in text]
     text = [re.sub(r'([$]?[0-9]+[%a-z]+?\.? )\b', '', sentence) for sentence in text]
     text = [re.sub(r'\s([0-9]+[\.,:\-\_]?)([0-9]+)?([a-z]+)?', '', sentence) for sentence in text]
     text = [re.sub(r'(?<=[A-Za-z]|\_|\-)([0-9]+[\.,:\-\_]?)([0-9]+)?([a-z]+)?( )?\b', '', sentence) for sentence in text]
-    #text = [re.sub(r'\s[a-z]\b', '', sentence) for sentence in text]
     return text
 
 
@@ -250,7 +248,6 @@ def amazon_ner_reddit(text):
     text = [re.sub(r"\b(etc)(\.?\,?)", "", sentence) for sentence in text]
     text = [re.sub(r" \& ", " and ", sentence) for sentence in text]
     text = [re.sub(r"\&", " and ", sentence) for sentence in text]
-    #text = [re.sub(r"\b(radio station|station|radio)\b", "radiostation", sentence) for sentence in text]
     return text
 
 
@@ -326,7 +323,6 @@ def preprocess_amazon_text_data(df_filepath, category, subreddit_name, method='t
     stopwords: input type is (str) item, 'yes' or 'no'. Default = 'yes'.
     stoplist_type: input type is (str) item, 'general' (no prepositions), 'prep' (prepositions only), 'full' (both). Default = 'general'.
     
-    
     Example: 
     amazon_filepath = 'reddit/__data/__posts/Amazon/alexa'
     column_list = ['title', 'body', 'comments']
@@ -338,7 +334,6 @@ def preprocess_amazon_text_data(df_filepath, category, subreddit_name, method='t
     
     try: 
         if len(glob.glob(f"{df_filepath}/*.csv")) == 0:
-            #CSV names: {list(filter(lambda f: f.endswith(".csv"), os.listdir(df_filepath)))}
             raise TypeError 
         if type(subreddit_name) != str:
             raise TypeError 
@@ -402,8 +397,6 @@ def preprocess_amazon_text_data(df_filepath, category, subreddit_name, method='t
     except TypeError:
         print(f'\nOh no! Seems there is an issue with the input values:\n\n   Input Directory: {df_filepath}\n   Number CSVs: {len(glob.glob(f"{df_filepath}/*.csv"))}\n   Subreddit: {subreddit_name}\n   Category: {category}\n   Method: {method}\n   Dataset separator: {sep}\n   Stopword (y/n): {stopwords}\n   Stopword List: {stopword_listtype}\n   Singularize (y/n): {singularize}')
         print('\nPlease check your input values, and try again.\n')
-    #finally: 
-    #    sys.exit(1)
    
     
 if __name__ == "__main__":
