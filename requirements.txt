@@ -296,7 +296,7 @@ typing_extensions==4.7.1
 tzdata==2023.3
 umap-learn==0.5.3
 update-checker==0.18.0
-urllib3==1.26.16
+urllib3>=1.26.17
 wasabi==1.1.2
 wcwidth==0.2.6
 websocket-client==1.6.1
