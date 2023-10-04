@@ -88,13 +88,11 @@ def expand_contractions(text):
     # general patterns
     text = [re.sub(r"(?<=[a-z])n(\\\'|\'|\\\’|\’)t", " not", sentence) for sentence in text]
     text = [re.sub(r"(\\\'|\'|\’)re\b", " are", sentence) for sentence in text]
-    #text = [re.sub(r"(\\'|\'|\’)s\b", "", sentence) for sentence in text]
     text = [re.sub(r"(?<=[a-z]|I)(\\\'|\'|\’)d\b", " would", sentence) for sentence in text]
     text = [re.sub(r"(?<=[a-z]|I)(\\\'|\'|\’)ll", " will", sentence) for sentence in text]
     text = [re.sub(r"(?<=[a-z]|I)(\'|\’)ve\b", " have", sentence) for sentence in text]
     text = [re.sub(r"\b(I|i)(\\\'m|\'m|\’m|m)\b", "i am", sentence) for sentence in text]
     text = [re.sub(r"\b((I|i)(\'|\’)ll|(I|i)ll)\b", "i will", sentence) for sentence in text]
-    #text = [re.sub(r"\+", "plus", sentence) for sentence in text]
     return text
 
 
@@ -460,8 +458,7 @@ def preprocess_text_data(df_filepath, category, subreddit_name, method='token', 
         print(f'\nOh no! Seems there is an issue with the input values:\n\n   Input Directory: {df_filepath}\n   Number CSVs: {len(glob.glob(f"{df_filepath}/*.csv"))}\n   Subreddit: {subreddit_name}\n   Category: {category}\n   Method: {method}\n   Dataset separator: {sep}\n   Stopword (y/n): {stopwords}\n   Stopword List: {stopword_listtype}\n   Singularize (y/n): {singularize}')
         print('\nPlease check your input values, and try again.\n')
     
-     
-     
+
             
 if __name__ == "__main__":
     preprocess_text_data()
