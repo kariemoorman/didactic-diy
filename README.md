@@ -3,7 +3,7 @@
 
 ---
 ### Tutorials
-- Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures)
+- Basics: [git](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git), [SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql), [data structures](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures), [Regex: extract words, integers, & characters](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/regex/regex_extract.py)
 - Statistics: [T-Tests](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/t_test.ipynb), [Chi-Square](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/chi_squared.ipynb)
 - Encoders: [Character Encoding (binary, ascii, base64)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py)
 - Webscraping: [Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper), [Tiktok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)
