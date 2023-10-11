@@ -37,9 +37,9 @@ def trimmed_mean(data, percentage):
     print("  Upper End:", sorted_data[-num_to_trim:])  # Values removed from the upper end
 
 
-
+# Example
 # Create an array of data
-data = np.array([1, 1, 1, 2, 3, 3, 4, 5, 22, 44, 88, 94, 101, 111, 121, 135, 144, 163, 212, 222, 234, 282, 322, 432, 682, 723, 1001])
+#data = np.array([1, 1, 1, 2, 3, 3, 4, 5, 22, 44, 88, 94, 101, 111, 121, 135, 144, 163, 212, 222, 234, 282, 322, 432, 682, 723, 1001])
 
-scipy_trimmed_mean(data)
-trimmed_mean(data, 0.05)
+#scipy_trimmed_mean(data)
+#trimmed_mean(data, 0.05)
