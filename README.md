@@ -24,7 +24,7 @@
 - GEOINT: [Earthquake Analysis in R](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/r/geospatial_analysis-earthquakes.md)
 - Computer Vision: [Face Detection](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py)
 - NLP: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Sentiment & Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/sentiment_analysis_hf.ipynb)
-
+- TTS: [Text-to-Speech using gTTS](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/gtts.py)
     
 --- 
 ### Projects
