@@ -13,8 +13,9 @@
 - Statistics & Machine Learning:
   - Inferential Statistics: [T-Tests](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/t_test.ipynb), [Chi-Square](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/chi_squared.ipynb)
   - Metrics: [Trimmed Mean](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/trimmed_mean), [Moving Average](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/moving_avg)
+  - Regression Analyses: [Logistic Regression (Binomial & Multinomial)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
   - Clustering: [Vector Search using NearestNeighbors](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/clustering/Vector_Search.ipynb)
-  - Classification: [SVMs](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/classification/SVM_classification.ipynb), [Logistic Regression (Binomial & Multinomial)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
+  - Classification: [SVMs](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/classification/SVM_classification.ipynb)
   - Causal Modeling: [Inferring Workplace Performance from RTO Status](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/causal_modeling/causal_inference_modeling.ipynb)
   - Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb), [Contextual Bandits](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb)
   - Anomaly Detection: [Isolation Forest](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb)
