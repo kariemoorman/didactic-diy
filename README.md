@@ -23,8 +23,8 @@
 - Testing: [Unit Tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)
 - GEOINT: [Earthquake Analysis in R](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/r/geospatial_analysis-earthquakes.md)
 - Computer Vision: [Face Detection](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py)
-- NLP:
-  - Sentiment Analysis: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Sentiment & Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/sentiment_analysis_hf.ipynb)
+- NLP: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Sentiment & Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/sentiment_analysis_hf.ipynb)
+
     
 --- 
 ### Projects
