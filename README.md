@@ -22,6 +22,7 @@
 - Metrics:
   - Econometrics: [Trimmed Mean](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/trimmed_mean)
   - Forecasting: [Moving Average](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/moving_avg)
+  - Engagement: [Content Engagement Rate](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/metrics/content_engagement)
 - Encoding & Encryption:
   - Encoders: [Character Encoding (binary, ascii, base64)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py)
   - Cryptography: [Password Generation](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_generation.py), [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation (hash & salt)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py), [Symmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py), [Asymmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/asymmetric_encryption.py)
