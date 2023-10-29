@@ -10,6 +10,7 @@
   - SQL: [DDL, DCL, & DQL in SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
 - Data Mining:
   - Webscraping: [Scraping Reddit using PRAW](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper), [Scraping Tiktok using Pyppeteer & Selenium](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)
+  - Screenshots: [Automated URL Screenshots using Pyppeteer](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/data_mining/url_screenshot.py)
 - Statistics & Machine Learning:
   - Inferential Statistics: [T-Tests](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/t_test.ipynb), [Chi-Square](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/chi_squared.ipynb)
   - Regression Analyses: [Logistic Regression (Binomial & Multinomial)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
