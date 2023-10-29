@@ -28,6 +28,7 @@
   - Cryptography: [Password Generation](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_generation.py), [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation (hash & salt)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py), [Symmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py), [Asymmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/asymmetric_encryption.py)
 - Computer Vision:
   - Face Detection: [Face Detection using OpenCV](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py)
+  - Object Detection: [Object Detection using ResNet & YOLOv](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py)
 - NLP:
   - Sentiment: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Sentiment & Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/sentiment_analysis_hf.ipynb)
   - Audio Transcription: [Transcription using OpenAI Whisper & Google SpeechRecognition](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
