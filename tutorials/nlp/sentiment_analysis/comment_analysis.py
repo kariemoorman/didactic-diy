@@ -18,11 +18,12 @@ class CommentAnalyzer:
         self.nlp = spacy.load('en_core_web_sm')
         self.nlp.add_pipe('spacytextblob')
         self.derogatory_word_weights = {
-                                        "hate": 0.8,
-                                        "stupid": 0.6,
                                         "idiot": 0.7,
                                         "dumb": 0.1,
-                                        # Add more words and weights
+                                        "retarded": 0.3,
+                                        "nazi": 0.5,
+                                        "stupid": 0.6,
+                                        "hate": 0.8,
                                         }
 
     def calculate_derogatory_score(self, comment):
