@@ -22,7 +22,7 @@ cryptography>=41.0.4
 cycler==0.11.0
 cymem==2.0.7
 Cython==0.29.36
-dash==2.11.1
+dash==2.15
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
