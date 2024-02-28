@@ -3,8 +3,11 @@
 
 ---
 
-<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/git/images/github-commands.drawio.png' height='60%' width='60%'/></p>
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/git/images/git_graphic.png' height='60%' width='60%'/></p>
 
+---
+
+<p align='center'><img src='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/git/images/github-commands.drawio.png' height='60%' width='60%'/></p>
 
 ---
 
