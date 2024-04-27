@@ -1,6 +1,11 @@
 <h2 align='center'>didactic-diy</h2>
 <h4 align='center'>Data Engineering, Science & Analytics, for practice and utility.</h4>
 
+![GitHub last commit](https://img.shields.io/github/last-commit/kariemoorman/didactic-diy)
+[![GitHub license](https://img.shields.io/badge/license-GNU_General_Public_License--3.0-blue.svg)](https://raw.githubusercontent.com/kariemoorman/didactic-diy/main/LICENSE)
+![GitHub stars](https://img.shields.io/github/stars/kariemoorman/didactic-diy?style=social)
+![GitHub stars](https://img.shields.io/github/forks/kariemoorman/didactic-diy?style=social)
+
 ---
 ### Tutorials
 - Basics:
