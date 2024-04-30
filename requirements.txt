@@ -41,7 +41,7 @@ future==0.18.3
 h11==0.14.0
 hdbscan==0.8.33
 huggingface-hub==0.16.4
-idna==3.4
+idna==3.7
 importlib-metadata==6.8.0
 ipykernel==6.25.0
 ipython==8.14.0
@@ -89,7 +89,7 @@ ptyprocess==0.7.0
 pure-eval==0.2.2
 pyarrow>=14.0.1
 pycparser==2.21
-pydantic==1.10.11
+pydantic==1.10.13
 pydub==0.25.1
 pyee==8.2.2
 Pygments==2.15.1
