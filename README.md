@@ -37,7 +37,7 @@
   - Face Detection: [Face Detection using OpenCV](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py)
   - Object Detection: [Object Detection using ResNet & YOLOv](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py)
 - NLP:
-  - Sentiment: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Sentiment & Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/sentiment_analysis_hf.ipynb)
+  - Sentiment: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/emotion_analysis.py)
   - Audio Transcription: [Transcription using OpenAI Whisper & Google SpeechRecognition](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
   - OCR: [OCR using Tesseract](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/ocr/ocr_tesseract.ipynb)
   - TTS: [Text-to-Speech using gTTS](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/gtts.py)
