@@ -87,7 +87,7 @@
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py' target='_blank'>Audio Transcription using OpenAI Whisper & Google SpeechRecognition</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/ocr/ocr_tesseract.ipynb' target='_blank'>OCR using Tesseract</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/gtts.py' target='_blank'>Text-to-Speech using gTTS</a></li>
-      <li><a href='' target='_blank'>Text-to-Speech using Voice Cloning</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/voice_clone.py' target='_blank'>Text-to-Speech using Voice Cloning</a></li>
     </ul></td> 
   </tr>
   <tr>
