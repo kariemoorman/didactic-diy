@@ -6,70 +6,106 @@
 ![GitHub stars](https://img.shields.io/github/stars/kariemoorman/didactic-diy?style=social)
 ![GitHub stars](https://img.shields.io/github/forks/kariemoorman/didactic-diy?style=social)
 
+
 ---
 ### Tutorials
-- Basics:
-  - Git: [git Commands](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git)
-  - Data Structures: [Data Structures in Python & JavaScript](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures)
-  - Regex: [Regex: Extract Words, Integers, & Characters](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/regex/regex_extract.py)
-  - SQL: [DDL, DCL, & DQL in SQL](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql)
-- Data Mining:
-  - Webscraping: [Scraping Reddit using PRAW](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper), [Scraping Tiktok using Pyppeteer & Selenium](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)
-  - Screenshots: [Automated URL Screenshots using Pyppeteer](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/data_mining/url_screenshot.py)
-- Statistics & Machine Learning:
-  - Inferential Statistics: [T-Tests](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/t_test.ipynb), [Chi-Square](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/chi_squared.ipynb)
-  - Regression Analyses: [Logistic Regression (Binomial & Multinomial)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
-  - Clustering: [Vector Search using NearestNeighbors](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/clustering/Vector_Search.ipynb)
-  - Classification: [SVMs](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/classification/SVM_classification.ipynb)
-  - Decision Trees: [XGBoost](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/decision_trees/xgboost.ipynb), [Random Forest](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/decision_trees/random_forest.ipynb)
-  - Causal Modeling: [Inferring Workplace Performance from RTO Status](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/causal_modeling/causal_inference_modeling.ipynb)
-  - Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb), [Contextual Bandits](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb)
-  - Anomaly Detection: [Isolation Forest](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb)
-  - Simulations: [Wildfire Spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
-- Metrics:
-  - Econometrics: [Trimmed Mean](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/trimmed_mean)
-  - Forecasting: [Moving Average](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/moving_avg)
-  - Engagement: [Content Engagement Rate](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/metrics/content_engagement)
-- Encoding & Encryption:
-  - Encoders: [Character Encoding (binary, ascii, base64)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py)
-  - Cryptography: [Password Generation](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_generation.py), [Hashing Algorithms](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py), [Password Creation (hash & salt)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py), [Symmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py), [Asymmetric Encryption](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/asymmetric_encryption.py)
-- Computer Vision:
-  - Face Detection: [Face Detection using OpenCV](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py)
-  - Object Detection: [Object Detection using ResNet & YOLOv](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py)
-- NLP:
-  - Classification: [Sentence Classification using Supervised Learning](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/classification/supervised_sentence_classification.ipynb)
-  - Sentiment: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/emotion_analysis.py)
-  - Audio Transcription: [Transcription using OpenAI Whisper & Google SpeechRecognition](https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py)
-  - OCR: [OCR using Tesseract](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/ocr/ocr_tesseract.ipynb)
-  - TTS: [Text-to-Speech using gTTS](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/gtts.py)
-- Search & Sorting Algorithms:
-  - Sorting Algorithms: [N-Best Using Min-Heap](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/sorting_algorithms/n_best.ipynb)
-  - Path Traversal: [Dijkstra's Algorithm](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/dijkstras_algorithm_shortest_path.ipynb)
-- Application Development:
-  - APIs: [RESTful API in Flask](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask)
-  - Testing: [Unit Tests](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests)        
---- 
+
+<table>
+  <tr><th>Category</th><th>Projects</th></tr>
+  <tr>
+    <td>Basics</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git' target='_blank'>git Commands</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures' target='_blank'>Data Structures in Python & JavaScript</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/regex/regex_extract.py' target='_blank'>Regex</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql' target='_blank'>SQL</a></li>  
+    </ul></td>
+  </tr>
+  <tr>
+    <td>Search & Sorting Algorithms</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/sorting_algorithms/n_best.ipynb' target='_blank'>Sorting: N-Best Using Min-Heap</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/algorithms/dijkstras_algorithm_shortest_path.ipynb' target='_blank'>Path Traversal: Dijkstra's Algorithm</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Data Mining</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper' target='_blank'>Scraping Reddit Using PRAW</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tiktok' target='_blank'>Scraping Tiktok using Pyppeteer & Selenium</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/data_mining/url_screenshot.py' target='_blank'>Automated URL Screenshots using Pyppeteer</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Encoding & Encryption</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py' target='_blank'>Character Encoding (binary, ascii, base64)</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_generation.py' target='_blank'>Password Generation</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/hash_functions.py' target='_blank'>Hashing Algorithms</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py' target='_blank'>Password Creation (hash & salt)</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py' target='_blank'>Symmetric Encryption</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py' target='_blank'>Asymmetric Encryption</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Statistics & Machine Learning</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/t_test.ipynb' target='_blank'>Inferential Statistics: T-Tests</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/chi_squared.ipynb' target='_blank'>Inferential Statistics: Chi-Square</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb' target='_blank'>Logistic Regression (Binomial & Multinomial)</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/clustering/Vector_Search.ipynb' target='_blank'>Clustering: Vector Search using NearestNeighbors</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/classification/SVM_classification.ipynb' target='_blank'>Classification: SVMs</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/decision_trees/xgboost.ipynb' target='_blank'>Decision Trees: XGBoost</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/decision_trees/random_forest.ipynb' target='_blank'>Decision Trees: Random Forest</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb' target='_blank'>Recommendation: Personalized Movie Reccomendations</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb' target='_blank'>Recommendation: Contextual Bandits</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb' target='_blank'>Anomaly Detection: Isolation Forest</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations' target='_blank'>Simulation: Wildfire Spread</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Metrics</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/trimmed_mean' target='_blank'>Econometrics: Trimmed Mean</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/moving_avg' target='_blank'>Forecasting: Moving Average</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/metrics/content_engagement' target='_blank'>Engagement: Content Engagement Rate</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Computer Vision</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py' target='_blank'>Face Detection using OpenCV</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py' target='_blank'>Object Detection using ResNet & YOLOv</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Natural Language Processing</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/classification/supervised_sentence_classification.ipynb' target='_blank'>Sentence Classification using Supervised Learning</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py' target='_blank'>Sentiment Analysis for Moderation Tasks</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/emotion_analysis.py' target='_blank'>Emotion Analysis using HuggingFace</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tiktok/__scripts/tiktok_video_to_text.py' target='_blank'>Audio Transcription using OpenAI Whisper & Google SpeechRecognition</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/ocr/ocr_tesseract.ipynb' target='_blank'>OCR using Tesseract</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/gtts.py' target='_blank'>Text-to-Speech using gTTS</a></li>
+      <li><a href='' target='_blank'>Text-to-Speech using Voice Cloning</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td>Application Development</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask' target='_blank'>RESTful API in Flask</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests' target='_blank'>Unit Testing</a></li>
+    </ul></td> 
+  </tr>
+</table>
+
+
+---
+
 ### Projects
 
 - <b>[Reddit](https://github.com/kariemoorman/didactic-diy/tree/main/reddit)</b>
 - <b>[TikTok](https://github.com/kariemoorman/didactic-diy/tree/main/tiktok)</b>
-
----
-
-### Associated Software Packages
-- <b>Web Scraping</b>
-  - Python: [beautifulsoup4](https://pypi.org/project/beautifulsoup4/), [requests](https://pypi.org/project/requests/), [urllib3](https://pypi.org/project/urllib3/), [selenium](https://www.selenium.dev/), [pyppeteer](https://pypi.org/project/pyppeteer/)
-  - JavaScript: [puppeteer](https://www.npmjs.com/package/puppeteer), [puppeteer-extra](https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth)
-  - APIs: [PRAW](https://praw.readthedocs.io/en/stable/package_info/references.html), [PushShift](https://github.com/pushshift/api), [PullPush](https://pullpush.io/)
-- <b>Database Management</b>
-  - SQL: [MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/), [PostgreSQL](https://www.postgresql.org/)
-  - Python: [PyMySQL](https://pypi.org/project/pymysql/) (MySQL database adaptor for Python), [psycopg2](https://pypi.org/project/psycopg2/) (PostgreSQL database adapter for Python)
-- <b>Data Structures & Processing</b>
-  - Python: [pandas](https://pypi.org/project/pandas/), [numpy](https://pypi.org/project/numpy/), [pyarrow](https://pypi.org/project/pyarrow/), [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [regex](https://pypi.org/project/regex/)
-- <b>Modeling (e.g., Statistical, ML)</b>
-  - Python: [pyspark](https://pypi.org/project/pyspark/), [nltk](https://pypi.org/project/nltk/), [spacy](https://pypi.org/project/spacy/), [scikit-learn](https://pypi.org/project/scikit-learn/), [bertopic](https://pypi.org/project/bertopic/), [pytorch](https://pypi.org/project/torch/), [transformers](https://pypi.org/project/transformers/)
-- <b>Visualization</b>
-  - Python: [matplotlib](https://pypi.org/project/matplotlib/), [seaborn](https://pypi.org/project/seaborn/), [plotly](https://pypi.org/project/plotly/), [dash](https://pypi.org/project/dash/)
 
 ---
 <p align='center'><b>License: <a href='https://choosealicense.com/licenses/gpl-3.0/'>GNU General Public License v3.0</a></b></p>
