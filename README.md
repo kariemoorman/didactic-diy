@@ -8,9 +8,10 @@
 
 
 ---
-### Tutorials
 
-<table>
+<h3 align='center'>Tutorials</h3>
+
+<table align='center'>
   <tr><th>Category</th><th>Projects</th></tr>
   <tr>
     <td align='center'><img src='https://cdn0.iconfinder.com/data/icons/toys-and-games-1/512/Toys_Games_Puzzle_pieces-1024.png' alt='basic' width="75px;" height="75px; style="max-width:100%"><br>Basics</td>
