@@ -27,7 +27,7 @@
   <tr>
     <td align='center'><img src='https://cdn3.iconfinder.com/data/icons/fintech-color-pop-vol-1/64/data-mining-1024.png' alt='mine' width="75px;" height="75px; style="max-width:100%"><br>Data Mining</td>
     <td><ul>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper' target='_blank'>Scraping Reddit Using PRAW</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper' target='_blank'>Scraping Reddit using PRAW</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tiktok' target='_blank'>Scraping Tiktok using Pyppeteer & Selenium</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/data_mining/url_screenshot.py' target='_blank'>Automated URL Screenshots using Pyppeteer</a></li>
     </ul></td> 
