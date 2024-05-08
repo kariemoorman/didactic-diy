@@ -53,7 +53,7 @@
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/classification/SVM_classification.ipynb' target='_blank'>Classification: SVMs</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/decision_trees/xgboost.ipynb' target='_blank'>Decision Trees: XGBoost</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/decision_trees/random_forest.ipynb' target='_blank'>Decision Trees: Random Forest</a></li>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb' target='_blank'>Recommendation: Personalized Movie Reccomendations</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb' target='_blank'>Recommendation: Personalized Movie Recommendations</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb' target='_blank'>Recommendation: Contextual Bandits</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb' target='_blank'>Anomaly Detection: Isolation Forest</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations' target='_blank'>Simulation: Wildfire Spread</a></li>
