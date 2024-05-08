@@ -10,10 +10,11 @@
   <tr>
     <td align='center'><img src='https://cdn0.iconfinder.com/data/icons/toys-and-games-1/512/Toys_Games_Puzzle_pieces-1024.png' alt='basic' width="75px;" height="75px; style="max-width:100%"><br>Basics</td>
     <td><ul>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git' target='_blank'>git Commands</a></li>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures' target='_blank'>Data Structures in Python & JavaScript</a></li>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/regex/regex_extract.py' target='_blank'>Regex</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/git' target='_blank'>git</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/sql' target='_blank'>SQL</a></li>  
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/regex/regex_extract.py' target='_blank'>Regex</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/data_structures' target='_blank'>Data Structures in Python & JavaScript</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/file_conversion/file_converter.py' target='_blank'>File Conversion (JSON, CSV, Parquet)</a></li>  
     </ul></td>
   </tr>
   <tr>
