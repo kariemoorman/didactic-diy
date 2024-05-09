@@ -71,6 +71,7 @@
     <td align='center'><img src='https://cdn2.iconfinder.com/data/icons/miscellaneous-49-color-shadow/128/geospatial_locations_gps_information_-512.png' alt='cv' width="75px;" height="75px; style="max-width:100%"><br>GeoSpatial Analysis</td>
     <td><ul>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/r/geospatial_analysis-earthquakes.md' target='_blank'>Earthquake Tracking in R</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/python/iplocator.py' target='_blank'>IP Locator in Python</a></li>
     </ul></td> 
   </tr>
   <tr>
