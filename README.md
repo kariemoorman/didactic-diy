@@ -25,14 +25,6 @@
     </ul></td> 
   </tr>
   <tr>
-    <td align='center'><img src='https://cdn3.iconfinder.com/data/icons/fintech-color-pop-vol-1/64/data-mining-1024.png' alt='mine' width="75px;" height="75px; style="max-width:100%"><br>Data Mining</td>
-    <td><ul>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper' target='_blank'>Scraping Reddit using PRAW</a></li>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tiktok' target='_blank'>Scraping Tiktok using Pyppeteer & Selenium</a></li>
-      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/data_mining/url_screenshot.py' target='_blank'>Automated URL Screenshots using Pyppeteer</a></li>
-    </ul></td> 
-  </tr>
-  <tr>
     <td align='center'><img src='https://cdn0.iconfinder.com/data/icons/web-hosting-technicons-vol-1/256/Data_Encryption-1024.png' alt='ee' width="75px;" height="75px; style="max-width:100%"><br>Encoding & Encryption</td>
     <td><ul>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py' target='_blank'>Character Encoding (binary, ascii, base64)</a></li>
@@ -41,6 +33,14 @@
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/password_creation.py' target='_blank'>Password Creation (hash & salt)</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py' target='_blank'>Symmetric Encryption</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/symmetric_encryption.py' target='_blank'>Asymmetric Encryption</a></li>
+    </ul></td> 
+  </tr>
+  <tr>
+    <td align='center'><img src='https://cdn3.iconfinder.com/data/icons/fintech-color-pop-vol-1/64/data-mining-1024.png' alt='mine' width="75px;" height="75px; style="max-width:100%"><br>Data Mining</td>
+    <td><ul>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper' target='_blank'>Scraping Reddit using PRAW</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tiktok' target='_blank'>Scraping Tiktok using Pyppeteer & Selenium</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/data_mining/url_screenshot.py' target='_blank'>Automated URL Screenshots using Pyppeteer</a></li>
     </ul></td> 
   </tr>
   <tr>
