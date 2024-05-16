@@ -79,6 +79,7 @@
     <td><ul>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py' target='_blank'>Face Detection using OpenCV</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py' target='_blank'>Object Detection using ResNet & YOLOv</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_match.py' target='_blank'>Face Comparison using Face-Detection</a></li>
     </ul></td> 
   </tr>
   <tr>
