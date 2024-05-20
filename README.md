@@ -3,7 +3,6 @@
 
 ---
 
-<h3 align='center'>Tutorials</h3>
 
 <table align='center'>
   <tr><th>Category</th><th>Projects</th></tr>
