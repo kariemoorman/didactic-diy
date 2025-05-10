@@ -38,7 +38,7 @@ Flask==2.2.5
 fonttools==4.47.0
 fsspec==2023.6.0
 future==0.18.3
-h11==0.14.0
+h11==0.16.0
 hdbscan==0.8.33
 huggingface-hub==0.16.4
 idna==3.7
