@@ -303,5 +303,5 @@ websocket-client==1.6.1
 websockets==10.4
 werkzeug>=3.0.1
 wsproto==1.2.0
-zipp==3.16.2
+zipp==3.19.1
 zstandard==0.21.0
