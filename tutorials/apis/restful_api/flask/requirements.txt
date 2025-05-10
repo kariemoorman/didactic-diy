@@ -15,11 +15,11 @@ Flask-JWT-Extended==4.5.2
 Flask-Limiter==3.4.1
 Flask-SQLAlchemy==3.0.5
 Flask-SSLify==0.1.5
-gunicorn==22.0.0
+gunicorn==23.0.0
 idna==3.7
 importlib-resources==6.0.1
 itsdangerous==2.1.2
-Jinja2==3.1.4
+Jinja2==3.1.6
 josepy==1.13.0
 limits==3.5.0
 markdown-it-py==3.0.0
@@ -40,6 +40,6 @@ rich==13.5.2
 six==1.16.0
 SQLAlchemy==2.0.20
 typing_extensions==4.7.1
-urllib3==2.0.7
+urllib3==2.2.2
 werkzeug>=3.0.1
 wrapt==1.15.0
