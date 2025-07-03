@@ -40,6 +40,6 @@ rich==13.5.2
 six==1.16.0
 SQLAlchemy==2.0.20
 typing_extensions==4.7.1
-urllib3==2.2.2
+urllib3==2.5.0
 werkzeug>=3.0.1
 wrapt==1.15.0
