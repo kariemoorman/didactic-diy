@@ -82,7 +82,7 @@
     </ul></td> 
   </tr>
   <tr>
-    <td align='center'><img src='https://cdn4.iconfinder.com/data/icons/artificial-intelligence-honey-vol-2/64/NATURAL_LANGUAGE_PROCESSING-512.png' alt='nlp' width="75px;" height="75px; style="max-width:100%"><br>Natural Language Processing</td>
+    <td align='center'><img src='https://cdn4.iconfinder.com/data/icons/artificial-intelligence-honey-vol-2/64/NATURAL_LANGUAGE_PROCESSING-512.png' alt='nlp' width="75px;" height="75px;" style="max-width:100%"><br>Natural Language Processing</td>
     <td><ul>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/classification/supervised_sentence_classification.ipynb' target='_blank'>Sentence Classification using Supervised Learning</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py' target='_blank'>Sentiment Analysis for Moderation Tasks</a></li>
@@ -94,7 +94,7 @@
     </ul></td> 
   </tr>
   <tr>
-    <td align='center'><img src='https://p7.hiclipart.com/preview/142/419/654/web-development-computer-icons-software-development-technology-software.jpg' alt='apps' width="75px;" height="75px; style="max-width:100%"><br>Application Development</td>
+    <td align='center'><img src="https://cdn.imgbin.com/17/6/22/imgbin-web-development-computer-icons-software-development-technology-software-6s99J1RvpdcrpB9hEepQjQbPN.jpg" alt='apps' width="75px;" height="75px;" style="max-width:100%"><br>Application Development</td>
     <td><ul>
       <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/apis/restful_api/flask' target='_blank'>RESTful API in Flask</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/tests' target='_blank'>Unit Testing</a></li>
