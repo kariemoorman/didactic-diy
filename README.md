@@ -67,7 +67,7 @@
     </ul></td> 
   </tr>
   <tr>
-    <td align='center'><img src='https://cdn2.iconfinder.com/data/icons/miscellaneous-49-color-shadow/128/geospatial_locations_gps_information_-512.png' alt='cv' width="75px;" height="75px; style="max-width:100%"><br>GeoSpatial Analysis</td>
+    <td align='center'><img src='https://cdn2.iconfinder.com/data/icons/miscellaneous-49-color-shadow/128/geospatial_locations_gps_information_-512.png' alt='geo' width="75px;" height="75px; style="max-width:100%"><br>GeoSpatial Analysis</td>
     <td><ul>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/r/geospatial_analysis-earthquakes.md' target='_blank'>Earthquake Tracking in R</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/geoint/python/iplocator.py' target='_blank'>IP Locator in Python</a></li>
@@ -79,6 +79,7 @@
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py' target='_blank'>Face Detection using OpenCV</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py' target='_blank'>Object Detection using ResNet & YOLOv</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_match.py' target='_blank'>Face Comparison using Face-Detection</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/yolo-cv.py' target='_blank'>Object & Pose Detection, Image Segmentation in Images & Video via YOLO</li>
     </ul></td> 
   </tr>
   <tr>
