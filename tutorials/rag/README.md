@@ -15,7 +15,7 @@
 - Generate a concise summary using LLM (e.g., QwenChat).
 - Print the summary output to the console.
 
-### Example
+### Example: Document Summarization
 
 #### Script
 [basic_rag_qwen.py](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/rag/basic_rag_qwen.py)
