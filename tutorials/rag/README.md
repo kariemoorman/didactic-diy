@@ -12,8 +12,8 @@
 - Chunk the text into manageable pieces.
 - Create vector embeddings and store in vector database (e.g., FAISS).
 - Retrieve relevant chunks for summarization based on input query.
-- Generate a concise summary using LLM (e.g., QwenChat).
-- Print the summary output to the console.
+- Generate a response using LLM (e.g., QwenChat).
+- Print the response output to the console.
 
 ### Example: Document Summarization
 
