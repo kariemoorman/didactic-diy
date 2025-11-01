@@ -92,6 +92,7 @@
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/ocr/ocr_tesseract.ipynb' target='_blank'>OCR using Tesseract</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/gtts.py' target='_blank'>Text-to-Speech using gTTS</a></li>
       <li><a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/tts/voice_clone.py' target='_blank'>Text-to-Speech using Voice Cloning</a></li>
+      <li><a href='https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/rag' target='_blank'>RAG with QWEN</li>
     </ul></td> 
   </tr>
   <tr>
