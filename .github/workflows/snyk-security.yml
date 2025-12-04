@@ -35,6 +35,7 @@ jobs:
   snyk:
     if: >
       github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
       github.event.action == 'opened' ||
       github.event.action == 'reopened' ||
       github.event.action == 'synchronize' ||
