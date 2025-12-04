@@ -60,7 +60,7 @@ jobs:
 
       # --- SNYK CODE (always run — fast and provides SARIF) ---
       - name: Snyk Code test
-        run: snyk code test --sarif > snyk-code.sarif || true
+        run: snyk code test --sarif > snyk-code.sarif 2> snyk-code.log || true
 
       # --- ONLY RUN FULL TESTS ON OPENED/REOPENED OR MERGE ---
       # - name: Snyk Open Source monitor
@@ -81,6 +81,6 @@ jobs:
 
       # --- ALWAYS UPLOAD SARIF ---
       - name: Upload SARIF to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: snyk-code.sarif
