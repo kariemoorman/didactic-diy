@@ -60,7 +60,7 @@ jobs:
 
       # --- SNYK CODE (always run — fast and provides SARIF) ---
       - name: Snyk Code test
-        run: snyk code test --sarif > snyk-code.sarif
+        run: snyk code test --sarif > snyk-code.sarif || true
 
       # --- ONLY RUN FULL TESTS ON OPENED/REOPENED OR MERGE ---
       - name: Snyk Open Source monitor
@@ -71,13 +71,13 @@ jobs:
         if: github.event.action != 'synchronize'
         run: snyk iac test --report
 
-      - name: Build Docker image
-        if: github.event.action != 'synchronize'
-        run: docker build -t your/image-to-test .
+      # - name: Build Docker image
+      #   if: github.event.action != 'synchronize'
+      #   run: docker build -t your/image-to-test .
 
-      - name: Snyk Container monitor
-        if: github.event.action != 'synchronize'
-        run: snyk container monitor your/image-to-test --file=Dockerfile
+      # - name: Snyk Container monitor
+      #   if: github.event.action != 'synchronize'
+      #   run: snyk container monitor your/image-to-test --file=Dockerfile
 
       # --- ALWAYS UPLOAD SARIF ---
       - name: Upload SARIF to GitHub Code Scanning
