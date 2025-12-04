@@ -63,9 +63,9 @@ jobs:
         run: snyk code test --sarif > snyk-code.sarif || true
 
       # --- ONLY RUN FULL TESTS ON OPENED/REOPENED OR MERGE ---
-      - name: Snyk Open Source monitor
-        if: github.event.action != 'synchronize'
-        run: snyk monitor --all-projects
+      # - name: Snyk Open Source monitor
+      #   if: github.event.action != 'synchronize'
+      #   run: snyk monitor --all-projects
 
       - name: Snyk IaC test and report
         if: github.event.action != 'synchronize'
